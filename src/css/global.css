@@ -1,0 +1,585 @@
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+*{
+	-webkit-box-sizing:	border;
+	-webkit-box-sizing:	border-box;
+	-moz-box-sizing:	border;
+	-moz-box-sizing:	border-box;
+	box-sizing:			border-box;
+}
+	:focus{outline: none}
+
+
+/** Custom typefaces */
+@font-face{
+	font-family: "MAIcons";
+	src:url("../fonts/MAIcons.eot");
+	src:url("../fonts/MAIcons.eot#iefix") format("embedded-opentype"),
+		url("../fonts/MAIcons.woff") format("woff"),
+		url("../fonts/MAIcons.ttf") format("truetype"),
+		url("../fonts/MAIcons.svg#MAIcons") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.i.border1::before		{	content: "\e603";	}
+.i.border2::before		{	content: "\e604";	}
+.i.close::before		{	content: "×";		}
+.i.dagger1::before		{	content: "\e605";	}
+.i.dagger2::before		{	content: "\e606";	}
+.i.fleuron1-l::before	{	content: "\e607";	}
+.i.fleuron1-r::before	{	content: "\e608";	}
+.i.fleuron2-b::before	{	content: "\e60c";	}
+.i.fleuron2-l::before	{	content: "\e609";	}
+.i.fleuron2-r::before	{	content: "\e60a";	}
+.i.fleuron2-t::before	{	content: "\e60b";	}
+.i.fleuron3-b::before	{	content: "\e60d";	}
+.i.fleuron3-t::before	{	content: "\e60e";	}
+.i.fleuron4::before		{	content: "\e60f";	}
+.i.fleuron5::before		{	content: "\e610";	}
+.i.fleuron6::before		{	content: "\e611";	}
+.i.fleuron7::before		{	content: "\e612";	}
+.i.fleuron8::before		{	content: "\e613";	}
+.i.nav::before			{	content: "\2630";	}
+.i.search::before		{	content: "\2315";	}
+
+
+/*=============================================================================*
+	1. ELEMENTS
+===============================================================================*/
+
+
+a:link{
+	color: #a2787a;
+	text-decoration: none;
+}
+	a:visited{
+/*		color: #787878;*/
+		color: #a2787a;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+
+label{
+	cursor: pointer;
+}
+
+abbr[title]{
+	border: none;
+}
+
+img{
+	max-width: 100%;
+	vertical-align: top;
+}
+
+/** Headings */
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+
+h1{
+	font: small-caps 1.25em/2.5em Georgia;
+	letter-spacing: .05em;
+}
+h2{
+	font: small-caps 1.625em Verdana;
+}
+	h2 > a[href]{
+		color: inherit;
+	}
+	h2 > a:hover{
+		color: #82585a;
+		text-decoration: none;
+	}
+h3{
+	font: 1.375em Georgia;
+}
+
+
+hr{
+	margin: .5em 0;
+	padding: 0;
+	border: 1px solid #555;
+	border-width: 1px 0 0;
+	clear: both;
+}
+
+
+/** Lists */
+dt, dd{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 1.6;
+	margin: 0;
+}
+	dt{
+		color: #6d3f40;
+		font-family: Georgia;
+		width: 45%;
+	}
+	
+
+/** Form elements */
+fieldset{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button, .btn, a.btn{
+	background: url("../img/waves.png");
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	color: #82585a;
+	border: 1px solid #241008;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+textarea, select{
+	background: #1b0b0b;
+	border: 1px solid #c2b8af;
+	padding: .15em .25em;
+}
+
+
+/*=============================================================================*
+	2. PROJECT-SPECIFIC
+===============================================================================*/
+
+/** Status colours */
+.status.active{
+	color: #690;
+}
+
+.status.rejected,
+.status.closed,
+.status.split-up{
+	color: #ac0000;
+}
+
+
+
+/** Links representing usernames. */
+.user{
+	word-break: break-all;
+}
+
+/** Cluster of links that may/may not be directly related to each other. Displayed in decorated columns on mobile. */
+.link-list{
+	padding-left: 3.75em;
+	min-height: 5.5em;
+	margin-bottom: .7em;
+}
+	/** Decoration */
+	.link-list::before{
+		content: "";
+		font-size: 1.825em;
+		position: absolute;
+		width:	1em;
+		height:	3.4em;
+		background: url("../img/sprites.png") no-repeat -45px -2px;
+		left:	.6em;
+		margin-top: .2em;
+	}
+	
+	/** Heading */
+	.link-list > h3{
+		margin-bottom: .2em;
+	}
+
+	.link-list > a{
+		float: left;
+		clear: both;
+		padding: .25em 0;
+	}
+
+	/** Obviously necessary clear-fix. */
+	.link-list::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+
+/** Decorative/non-scaling dividers centred in the middle of page. */
+.divider{
+	height: 1.5em;
+	text-align: center;
+	color: #6d3f40;
+}
+	.long.divider::after{
+		content: "\e603";
+		font: 1em/0 MAIcons;
+	}
+	
+	.short.divider::after{
+		content: "\e612";
+		font: 1em/0 MAIcons;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+
+/** Scalable decorative divider. Tempting to name this ".double-helixed-sceptre" as an obvious Melechesh reference, but whatever... */
+.double-sceptre{
+	white-space: nowrap;
+	margin: .75em -.75em -.5em;
+}
+	ul + .double-sceptre{
+		margin-top: -.25em;
+		margin-bottom: 0;
+	}
+
+	.double-sceptre > s{
+		padding: 0 1.375em 0 3.125em;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		height: 1em;
+		width: 50%;
+
+		font-size: 19px;
+		font-size: 1.1875rem;
+	}
+		/** Flip the first sceptre to point left */
+		.double-sceptre > s:first-child{
+			-webkit-transform:	scaleX(-1);
+			-moz-transform:		scaleX(-1);
+			-ms-transform:		scaleX(-1);
+			-o-transform:		scaleX(-1);
+			transform:			scaleX(-1);
+		}
+
+		.double-sceptre > s > i,
+		.double-sceptre > s::before,
+		.double-sceptre > s::after{
+			height:	100%;
+			display: block;
+			background: url("../img/sprites.png") no-repeat;
+		}
+
+		/** Repeating image */
+		.double-sceptre > s > i{
+			background-repeat: repeat-x;
+			background-position: 0 -107px;
+		}
+
+		/** Left/right ends */
+		.double-sceptre > s::before,
+		.double-sceptre > s::after{
+			content: "";
+			position: absolute;
+			top: 0;
+		}
+			.double-sceptre > s::before{
+				left: .075em;
+				width: 3.125em;
+				background-position: 0 -89px;
+			}
+			.double-sceptre > s::after{
+				right: 0;
+				width: 1.375em;
+				background-position: -60px -89px;
+			}
+
+
+
+
+
+
+/** Ornamented buttons decorated like embellished seals. */
+.seal{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-align: center;
+	text-transform: lowercase;
+	font: .75em/1.3 Tahoma;
+}
+	.seal::before,
+	.seal::after{
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;	
+	}
+
+	.seal:hover{
+		text-decoration: none;
+	}
+
+
+	/** Edit */
+	.edit.seal{
+		padding: .75em .5em;
+		line-height: 1.35;
+		font-size: .87em;
+	}
+		.edit.seal::before,
+		.edit.seal::after{
+			content: "\e611";
+			font: 8px MAIcons;
+			position: absolute;
+			left: 0;
+			width: 100%;
+		}
+		.edit.seal::before	{	top:	0;	}
+		.edit.seal::after	{	bottom:	0;	}
+
+
+	/** Report an error */
+	.report.seal{
+		padding: 0 1em;
+		max-width: 5.75em;
+		margin: 0 .7em;
+	}
+		.report.seal::before,
+		.report.seal::after{
+			content: "\e607";
+			font: 3.25em MAIcons;
+			text-transform: none;
+			position: absolute;
+			top: 50%;
+			margin-top: -.5em;
+		}
+
+		.report.seal::before{
+			left: 0;
+		}
+
+		.report.seal::after{
+			right: 0;
+			-webkit-transform:	scaleX(-1);
+			-moz-transform:		scaleX(-1);
+			-ms-transform:		scaleX(-1);
+			-o-transform:		scaleX(-1);
+			transform:			scaleX(-1);
+		}
+
+
+
+
+/*=============================================================================*
+	3. COMPONENTS & WIDGETS
+===============================================================================*/
+
+
+/** Collapsible/foldable content blocks */
+.fold{
+
+}
+	/** First element: Heading/control for toggling the content */
+	.fold > :first-child{
+		background: url("../img/waves.png");
+		border: 0 solid #461f0f;
+		border-width: 1px 0;
+		text-align: right;
+		cursor: pointer;
+
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+		.closed.fold + .fold{
+			margin-top: -1px;
+		}
+
+
+
+	/** Second element: Folded content */
+	.fold > :first-child + *{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+		max-height: 9999em;
+		will-change: max-height;
+
+		-webkit-transition:	.3s ease max-height;
+		-moz-transition:	.3s ease max-height;
+		-o-transition:		.3s ease max-height;
+		transition:			.3s ease max-height;
+	}
+		.closed.fold > :first-child + *{
+			max-height: 0 !important;
+		}
+
+
+	/**
+	 * Folds using <header> tags for their disclosures are the fatter-style folds used to display "primary" content in the page's central column.
+	 * We could use an additional class for this like class="fat fold" or something, but we needed an extra wrapper element for the heading text anyway.
+	 */
+	.fold > header{
+		color: #ddd3cb;
+		height: 3.675em;
+		padding: 1em .35em;
+	}
+		/** Headings */
+		.fold > header > h3{
+			text-align: left;
+			position: absolute;
+			left: 0;
+		}
+			/** Ornament */
+			.fold > header > h3::before{
+				content: "\e605";
+				font: 1em MAIcons;
+				padding: 0 .5em;
+				display: inline-block;
+				vertical-align: -10%;
+				color: #6d3f40;
+			}
+
+			/** Edit buttons */
+			.fold > header > a[href]{
+				color: #c2b8af;
+			}
+			.fold > header > a:hover{
+				color: #824c4c;
+			}
+
+
+		/** Content */
+		.fold > header:first-child + div{
+			line-height: 1.4em;
+			font-size: .95em;
+			padding: 0 1em;
+		}
+			.fold > header + div::before,
+			.fold > header + div::after{
+				content: "";
+				padding-top: 1em;
+				display: block;
+				clear: both;
+			}
+
+			/** Content that spans more than one line. */
+			.long-text{
+				white-space: pre-line;
+			}
+
+
+/**
+ * Used to conceal a <select /> list over ordinary text, bringing up a list of options when the text's tapped.
+ * This can sometimes make for a more user-friendly experience, especially when space is a critical issue.
+ */
+.select-wrap{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+	/** Bit that gets displayed to the reader. */
+	.select-wrap > .value{
+		color: #a2787a;
+	}
+		.select-wrap:hover > .value{
+			text-decoration: underline;
+		}
+
+	/** Bit that brings up a list of options when pressed/tapped. */
+	.select-wrap > select{
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		z-index: 10;
+		top:	0;
+		left:	0;
+		width:	100%;
+		height:	100%;
+	}
+
+
+
+/*=============================================================================*
+	4. CLASSES
+===============================================================================*
+
+/** Structural classes */
+.centre{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 70em;
+}
+
+.nonvisual{
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	position: absolute;
+	border: 0;
+	padding: 0;
+}
+
+.r/*eplaced elements (logos/text banners/etc) */{
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left !important;
+	text-indent: -99999px;
+	height: 1em;
+	
+	-webkit-background-size:	auto 100%;
+	-khtml-background-size:		auto 100%;
+	-moz-background-size:		auto 100%;
+	-ms-background-size:		auto 100%;
+	-o-background-size:			auto 100%;
+	background-size:			auto 100%;
+}
+
+.i/*con replacement (social links, etc) */{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	text-align: left;
+	text-indent: -999em;
+	font: 1.5em MAIcons;
+	width:	1em;
+	height:	1em;
+}
+	.i::before{
+		display: block;
+		position: absolute;
+		top:	0;
+		left:	0;
+		bottom:	0;
+		right:	0;
+		text-align: center;
+		text-indent: 0;
+		
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+
+
+
+/** List styles */
+ul.plain,
+ol.plain,
+.plain > li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+/** Forcefully hidden element */
+.hidden{
+	display: none !important;
+}
