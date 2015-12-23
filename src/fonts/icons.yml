@@ -1,0 +1,179 @@
+# Icons created for Metal Archives specifically
+MA Icons:
+
+    General:
+        nav:               U+2630
+        search:            U+2315
+        delete:            U+274C
+        tick1:             U+2713
+        queue-up:          U+2B9D
+        queue-top:         U+2B99
+        queue-down:        U+2B9F
+        queue-bottom:      U+2B9B
+        reject:            U+1F595
+
+    Ornaments:
+        border1:           U+E603
+        border2:           U+E604
+        dagger1:           U+E605
+        dagger2:           U+E606
+        fleuron1-l:        U+E607
+        fleuron1-r:        U+E608
+        fleuron2-l:        U+E609
+        fleuron2-r:        U+E60A
+        fleuron2-t:        U+E60B
+        fleuron2-b:        U+E60C
+        fleuron3-b:        U+E60D
+        fleuron3-t:        U+E60E
+        fleuron4:          U+E60F
+        fleuron5:          U+E610
+        fleuron6:          U+E611
+        fleuron7:          U+E612
+        fleuron8:          U+E613
+
+
+
+# Vectorised jQuery UI
+jQuery:
+
+    Arrowheads:
+        arrow1-n:          U+2303
+        arrow1-ne:         U+2513
+        arrow1-e:          U+276F
+        arrow1-se:         U+251B
+        arrow1-s:          U+2304
+        arrow1-sw:         U+2517
+        arrow1-w:          U+276E
+        arrow1-nw:         U+250F
+        arrow1-ns:         U+1F859
+        arrow1-we:         U+1F858
+
+    Triangles:
+        arrow2-n:          U+25B2
+        arrow2-ne:         U+25E5
+        arrow2-e:          U+25B6
+        arrow2-se:         U+25E2
+        arrow2-s:          U+25BC
+        arrow2-sw:         U+25E3
+        arrow2-w:          U+25C0
+        arrow2-nw:         U+25E4
+        arrow2-ns:         U+2B65
+        arrow2-we:         U+2B64
+
+    Arrows:
+        arrow3-n:          U+2191
+        arrow3-ne:         U+2197
+        arrow3-e:          U+2192
+        arrow3-se:         U+2198
+        arrow3-s:          U+2193
+        arrow3-sw:         U+2199
+        arrow3-w:          U+2190
+        arrow3-nw:         U+2196
+        arrow3-ns:         U+2195
+        arrow3-swne:       U+2922
+        arrow3-we:         U+2194
+        arrow3-nwse:       U+2921
+        arrow3-n-bar:      U+2912
+        arrow3-e-bar:      U+21E5
+        arrow3-s-bar:      U+2913
+        arrow3-w-bar:      U+21E4
+
+    Thick arrows:
+        arrow4-n:          U+2B06
+        arrow4-ne:         U+2B08
+        arrow4-e:          U+2B95
+        arrow4-se:         U+2B0A
+        arrow4-s:          U+2B07
+        arrow4-sw:         U+2B0B
+        arrow4-w:          U+2B05
+        arrow4-nw:         U+2B09
+        arrow4-ns:         U+2B0D
+        arrow4-swne:       U+1F87D
+        arrow4-we:         U+2B0C
+        arrow4-nwse:       U+1F87E
+        arrow4-n-bar:      U+2B71
+        arrow4-e-bar:      U+2B72
+        arrow4-s-bar:      U+2B73
+        arrow4-w-bar:      U+2B70
+
+    Curved Arrows:
+        arrow-curved1-w:   U+2BAA
+        arrow-curved1-n:   U+2BAD
+        arrow-curved1-e:   U+2BA9
+        arrow-curved1-s:   U+2BAE
+        arrow-curved2-w:   U+2BA2
+        arrow-curved2-n:   U+2BA5
+        arrow-curved2-e:   U+2BA1
+        arrow-curved2-s:   U+2BA6
+        arrow-curved3-w:   U+2B8C
+        arrow-curved3-n:   U+2B8D
+        arrow-curved3-e:   U+2B8E
+        arrow-curved3-s:   U+2B8F
+
+    Misc:
+        move:              U+1F542
+        expand:            U+2928
+        external-link:     U+238B
+        new-window:        U+1F5D7
+        refresh:           U+1F501
+        shuffle:           U+1F500
+        arrow-opposites1:  U+2B80
+        arrow-opposites2:  U+2B82
+        folder-closed:     U+1F5C0
+        folder-open:       U+1F5C1
+        page:              U+1F5B9
+        note:              U+1F5C9
+        notebook:          U+1F4D3
+        mail-closed:       U+1F4EA
+        mail-open:         U+1F4ED
+        suitcase:          U+1F4BC
+        comment:           U+1F5E9
+        user:              U+1F464
+        print:             U+1F5B6
+        trash:             U+1F5D1
+        lock:              U+1F512
+        unlock:            U+1F513
+        bookmark:          U+1F56E
+        tag:               U+1F516
+        home:              U+2302
+        flag:              U+2691
+        calendar:          U+1F5D3
+        cart:              U+1F6CD
+        pencil:            U+270F
+        clock:             U+1F554
+        disk:              U+1F5AA
+        calculator:        U+1F5A9
+        zoom-in:           U+1F5DA
+        zoom-out:          U+1F5DB
+        zoom:              U+1F50E
+        spanner:           U+1F527
+        cog:               U+2699
+        heart:             U+2665
+        star:              U+2605
+        link:              U+1F517
+        cancel:            U+1F6C7
+        add1:              U+2B
+        add2:              U+2795
+        sub1:              U+2D
+        sub2:              U+2796
+        cross1:            U+2715
+        cross2:            U+2716
+        key:               U+1F511
+        bulb:              U+1F4A1
+        cut:               U+2702
+        paste:             U+1F4CB
+        copy:              U+1F5CD
+        contact:           U+1F4C7
+        pic:               U+1F5BC
+        film:              U+1F39E
+        script:            U+1F4DC
+        warn:              U+26A0
+        info:              U+1F6C8
+        alert:             U+2757
+        tick2:             U+2714
+        unpin:             U+1F588
+        pin:               U+1F4CC
+        play:              U+23F5
+        pause:             U+23F8
+        ff:                U+23E9
+        rewind:            U+23EA
