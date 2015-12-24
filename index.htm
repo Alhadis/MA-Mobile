@@ -19,9 +19,29 @@
 	</header>
 
 
-	<form id="search-bar" role="search">
-		<input type="search" id="search-query" name="searchString" size="25" tabindex="1" value="" />
-	</form>
+	<div id="search-bar" role="search">
+		<form>
+			<input type="search" id="search-query" name="searchString" size="25" tabindex="1" value="" />
+			
+			<label id="search-type">
+				Search by:
+				<select name="type">
+					<option value="band_name" selected="selected">Band name</option>
+					<option value="band_genre">Music genre</option>
+					<option value="band_themes">Lyrical themes</option>
+					<option value="album_title">Album title</option>
+					<option value="song_title">Song title</option>
+					<option value="label_name">Label</option>
+					<option value="artist_alias">Artist</option>
+					<option value="user_name">User profile</option>
+					<option value="google">Google</option>
+				</select>
+			</label>
+			
+			<input type="submit" id="search-submit" value="Submit" />
+		</form>
+		<a href="#">Advanced search</a>
+	</div>
 
 
 	<nav id="sidebar">
