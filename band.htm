@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="open-search">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,6 +9,9 @@
 <link rel="stylesheet" type="text/css" href="src/css/fonts.css" />
 <link rel="stylesheet" type="text/css" href="src/css/global.css" />
 <link rel="stylesheet" type="text/css" href="src/css/main.css" />
+
+<!--[if lt IE 9]><script src="src/js/jquery-1.11.3.js"></script><![endif]-->
+<!--[if gte IE 9]><!--><script src="src/js/jquery-2.1.4.js"></script><!--<![endif]-->
 </head>
 
 
@@ -18,38 +21,12 @@
 		<h1 id="logo"><a href="index.htm">Encyclopaedia Metallum: The Metal Archives</a></h1>
 	</header>
 
-
-	<div id="search-bar" role="search">
-		<form action="search.htm" method="get">
-			<input type="search" id="search-query" name="searchString" size="25" tabindex="1" value="" />
-			
-			<label id="search-type">
-				Search by:
-				<select name="type">
-					<option value="band_name" selected="selected">Band name</option>
-					<option value="band_genre">Music genre</option>
-					<option value="band_themes">Lyrical themes</option>
-					<option value="album_title">Album title</option>
-					<option value="song_title">Song title</option>
-					<option value="label_name">Label</option>
-					<option value="artist_alias">Artist</option>
-					<option value="user_name">User profile</option>
-					<option value="google">Google</option>
-				</select>
-			</label>
-			
-			<input type="submit" id="search-submit" value="Submit" />
-		</form>
-		<a href="advanced-search.htm">Advanced search</a>
-	</div>
-
-
 	<nav id="sidebar">
 		<h2 class="nonvisual">Site Navigation</h2>
 		
-		<section class="fold">
+		<section id="your-profile">
 			<h3>Your Profile</h3>
-			<ul>
+			<ul class="fold">
 				<li><a href="user.htm">Alhadis</a></li>
 				<li><a href="user-list-bands.htm">My bands</a></li>
 				<li><a href="user-edit-profile.htm">My profile</a></li>
@@ -62,9 +39,9 @@
 			</ul>
 		</section>
 		
-		<section class="fold">
+		<section id="submissions">
 			<h3>Submissions</h3>
-			<ul>
+			<ul class="fold">
 				<li><a href="band-add.htm">Add band</a></li>
 				<li><a href="band-queue.htm">Band queue</a></li>
 				<li><a href="review-queue.htm">Review queue</a></li>
@@ -73,9 +50,9 @@
 			</ul>
 		</section>
 		
-		<section class="fold">
+		<section id="help-and-info">
 			<h3>Help &amp; Info</h3>
-			<ul>
+			<ul class="fold">
 				<li><a href="help.htm">Help</a></li>
 				<li><a href="rules.htm">Rules</a></li>
 				<li><a href="board/">Forum</a></li>
@@ -86,9 +63,9 @@
 			</ul>
 		</section>
 		
-		<section class="fold">
+		<section id="browse">
 			<h3>Browse</h3>
-			<ul>
+			<ul class="fold">
 				<li><a href="index.htm">Home page</a></li>
 				<li><a href="advanced-search.htm">Advanced search</a></li>
 				<li>
@@ -110,9 +87,9 @@
 			</ul>
 		</section>
 		
-		<section class="fold">
+		<section id="misc">
 			<h3>Misc</h3>
-			<ul>
+			<ul class="fold">
 				<li><a href="rip.htm"><abbr title="Rest in peace">R.I.P.</abbr></a></li>
 				<li><a href="band/random">Random band</a></li>
 				<li><a href="users.htm">User rankings</a></li>
@@ -134,6 +111,65 @@
 		</footer>
 	</nav>
 
+
+		
+	<div id="navbar" role="search">
+		<div id="bar-title">Metal Archives</div>
+		
+		<i id="toggle-sidebar" class="i nav" role="button">Toggle sidebar</i>
+		<i id="toggle-search" class="i search" role="button">Toggle search bar</i>
+		
+		<form id="search-form" action="search.htm" method="get">
+			<div id="search-wrap">
+				<input type="search" id="search-query" name="searchString" size="25" tabindex="1" value="Teitanblood" />
+				<input type="submit" id="search-submit" value="Submit" />
+			</div>
+			
+			<div id="search-options">
+				Search by:
+				<label id="search-type">
+					Band name
+					<select name="type">
+						<option value="band_name" selected="selected">Band name</option>
+						<option value="band_genre">Music genre</option>
+						<option value="band_themes">Lyrical themes</option>
+						<option value="album_title">Album title</option>
+						<option value="song_title">Song title</option>
+						<option value="label_name">Label</option>
+						<option value="artist_alias">Artist</option>
+						<option value="user_name">User profile</option>
+						<option value="google">Google</option>
+					</select>
+				</label>
+				
+				<i id="search-close" class="i close" role="button" title="Close search bar"></i>
+			</div>
+		</form>
+		
+		<script>
+			"use strict";
+			{
+				let $             = s => document.querySelector(s);
+				let rootClasses   = document.documentElement.classList;
+				
+				$("#search-query").addEventListener("focus", e => {
+					rootClasses.add("open-search");
+				});
+				
+				$("#search-close").addEventListener("mousedown", e => {
+					rootClasses.remove("open-search");
+					console.log("Closing");
+				});
+			}
+			
+			$("#toggle-sidebar").click(function(){
+				$("html").toggleClass("open-sidebar")
+			});
+			$("#search-type > select").change(function(e){
+				this.previousSibling.data = $(this.options[this.selectedIndex]).text();
+			});
+		</script>
+	</div>
 
 
 
@@ -169,15 +205,13 @@
 			
 			<section id="biography">
 				<h3>Biography</h3>
-				<div class="fold long-text">
-					One of the first doom metal bands. Influenced by <a href="band.htm">Black Sabbath</a>.
+				<div class="fold long-text">One of the first doom metal bands. Influenced by <a href="band.htm">Black Sabbath</a>.
 					
 					Saint Vitus were formed in 1978 under the name <a href="band.htm">Tyrant</a> with <a href="artist.htm">Scott Reagers</a> (vocals), <a href="artist.htm">Dave Chandler</a> (guitar), <a href="artist.htm">Mark Adams</a> (bass), and <a href="artist.htm">Armando Acosta</a> (drums), but changed their name to Saint Vitus in 1981. In the mid-1980s, while <a href="band.htm">The Obsessed</a> were on hiatus, <a href="artist.htm">Scott "Wino" Weinrich</a> would join the band, replacing Scott Reagers, and record with them up until their 1990 album "V". They released two more albums without him (the second with a briefly returning Scott Reagers), before splitting up in 1996. 
 					
 					They briefly reunited for a few shows in 2003, and when <a href="band.htm">Debris Inc.</a> and <a href="band.htm">The Hidden Hand</a> were both put on ice for good by 2008, Saint Vitus decided to stay reunited full time. They released their eighth studio album in 2012, with Wino on vocals. 
 					
-					In autumn 2014, they toured Europe for their 35th anniversary, performing "Born Too Late" in full. However, on November 9th, Wino was detained in Norway, for possession of illegal substances, and deported to the US, leaving the band to finish the tour as a trio.
-				</div>
+					In autumn 2014, they toured Europe for their 35th anniversary, performing "Born Too Late" in full. However, on November 9th, Wino was detained in Norway, for possession of illegal substances, and deported to the US, leaving the band to finish the tour as a trio.</div>
 			</section>
 			
 			
@@ -1359,7 +1393,5 @@
 
 
 
-
-	
 </body>
 </html>

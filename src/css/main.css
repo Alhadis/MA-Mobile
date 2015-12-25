@@ -1,8 +1,346 @@
 html{
 	background: #000;
 	color: #e2d8cf;
-	font-family: Verdana, Arial, Geneva, sans-serif;
+	font: 1em/1.4 Verdana, "Droid Sans", Arial, Geneva, sans-serif;
 	
 	overflow-x: hidden;
 	overflow-y: auto;
+	transition: .3s ease transform;
 }
+	html.open-sidebar{
+		transform: translateX(16.25em);
+	}
+
+
+/** Site's banner; hidden on mobile */
+#top{
+	display: none;
+}
+	#logo{
+		width: 100%;
+		background: no-repeat url("../img/logo.jpg");
+		background-size: auto 100%;
+		text-indent: -999em;
+		text-align: left;
+		line-height: 0;
+	}
+		#logo > a{
+			display: block;
+			padding-top: 30%;
+		}
+
+
+/** Navbar affixed to the top of the viewport on mobile */
+#navbar{
+	position: fixed;
+	z-index: 5;
+	top:	0;
+	left:	0;
+	right:	0;
+	height:	3.125em;
+	padding: 0 3.2em;
+	text-align: center;
+	background: #271010 url("../img/grain.png");
+	box-shadow: 0 0 .25em #000;
+}
+	#bar-title{
+		font: small-caps 1.25em/2.5 Georgia, serif;
+		letter-spacing: .05em;
+		overflow: hidden;
+		text-align: center;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	/** Toggle buttons */
+	#navbar > i{
+		position: absolute;
+		top:    0;
+		height: 100%;
+		width:  1.5em;
+		color: #c2af9f;
+		cursor: pointer;
+		transition: .3s ease color;
+	}
+		#navbar > i::before{
+			font-size: .7em;
+			position: absolute;
+			padding-top: 50%;
+		}
+		
+		#toggle-sidebar{ left:  0; z-index: 5; }
+		#toggle-search{  right: 0; }
+		.open-sidebar #toggle-sidebar{
+			color: #fff;
+		}
+	
+
+
+
+
+	/** Actual search <form> */
+	#search-form{
+		position: absolute;
+		top:	0;
+		right:	0;
+		height:	100%;
+		width:	100%;
+	}
+		/** Faux background to hide the input field when it's sliding closed */
+		#search-form::before{
+			content: "";
+			background: url("../img/grain.png");
+			position: absolute;
+			top:	0;
+			right:	0;
+			height:	100%;
+			width: 1.7em;
+			z-index: 3;
+		}
+		
+		/** Decorated wrapper for search field */
+		#search-wrap{
+			position: absolute;
+			background: #000;
+			border:	0 solid #917979;
+			border-width: 1px 0;
+			border-radius: .25em;
+			padding: .5em;
+			top:	.35em;
+			right:	1.75em;
+			height:	2.5em;
+			width:	90%;
+			width: calc(100% - 6em);
+			z-index: 1;
+			opacity: 0;
+			
+			backface-visibility: hidden;
+			will-change: transform;
+			perspective: 1em;
+			transition: .3s ease all;
+			transform: translateX(100%);
+			transform: translate3d(100%, 0, 0);
+			transform: translateX(calc(100%  - 2.5em));
+			transform: translate3d(calc(100% - 2.5em), 0, 0);
+		}
+			.open-search #search-wrap{
+				transform: translateX(0);
+				transform: translate3d(0, 0, 0);
+				opacity: 1;
+			}
+			
+			/** Embossed caps bolted on each end */
+			#search-wrap::before,
+			#search-form::after{
+				content: "";
+				background: no-repeat url("../img/caps.png");
+				background-size: auto 100%;
+				font-size: 3em;
+				width:	.92em;
+				height:	1em;
+				top:	50%;
+				right:	100%;
+				z-index: 2;
+				margin: -.5em -.33em 0;
+				position: absolute;
+			}
+				#search-form::after{
+					opacity: 0;
+					right: 0;
+					margin-right: 0;
+					background-position: 100% 0;
+					border-top: 1px solid transparent;
+				}
+			
+			/** Shared transition rules */
+			#search-form::before,
+			#search-form::after{
+				transition: .3s ease opacity, 0s step-end z-index .4s;
+				z-index: -2;
+			}
+				.open-search #search-form::before,
+				.open-search #search-form::after{
+					transition-delay: 0s;
+					z-index: 2;
+					opacity: 1;
+				}
+				
+				.open-search #search-form::before{
+					
+				}
+			
+			
+			
+			/** Actual input field */
+			#search-query{
+				background: none;
+				position: absolute;
+				border:	0;
+				top:	0;
+				left:	0;
+				width:	100%;
+				height:	100%;
+				display: block;
+				padding: 0 1.1em;
+			}
+				html:not(.open-search) #search-query{
+					cursor: pointer;
+				}
+
+
+		#search-submit{
+			display: none;
+		}
+
+
+		/** Panel holding the close button and search options */
+		#search-options{
+			display: block;
+			position: absolute;
+			white-space: nowrap;
+			font-size: .875em;
+			top:	100%;
+			width:	100vw;
+			right:	0;
+			padding: 1em;
+			text-align: left;
+			background: url("../img/waves.png");
+			border-bottom: 1px solid #461f0f;
+			
+			will-change: transform;
+			backface-visibility: hidden;
+			perspective: 1em;
+			transform: translateY(-200%);
+			transform: translate3d(0%, -200%, 0);
+			transition: .4s ease opacity, 0s step-end transform .5s;
+			z-index: -2;
+			opacity: 0;
+		}
+			/** Hidden screen to block interaction when fading out */
+			#search-options::after{
+				content: "";
+				position: absolute;
+				top:	0;
+				left:	0;
+				right:	0;
+				bottom:	0;
+				z-index: 2;
+			}
+				.open-search #search-options::after{
+					z-index: -1;
+				}
+			
+			.open-search #search-options{
+				transform: translateY(0);
+				transform: translate3d(0, 0, 0);
+				transition-delay: 0s;
+				opacity: 1;
+			}
+			
+			/** Type of search to perform */
+			#search-type{
+				display: inline-block;
+				position: relative;
+				color: #a2787a;
+			}
+				#search-type:hover{
+					text-decoration: underline;
+				}
+				#search-type > select{
+					position: absolute;
+					display: block;
+					cursor: pointer;
+					opacity: 0;
+					z-index: 2;
+					top:	0;
+					left:	0;
+					right:	0;
+					bottom:	0;
+				}
+			
+			/** Close button */
+			#search-close{
+				position: absolute;
+				top:	.35em;
+				right:	.5em;
+				cursor: pointer;
+				line-height: 0;
+			}
+				#search-close::before{
+					content: "×";
+					font-size: 1.3em;
+					padding-top: 30%;
+				}
+
+
+/** Slide-out sidebar */
+#sidebar{
+	position: fixed;
+	overflow: auto;
+	top:    0;
+	right:  100%;
+	width:  16.25em;
+	height: 100vh;
+	background: #000;
+	border-right: 1px solid #340404;
+	-webkit-overflow-scrolling: touch;
+}
+	#sidebar a{
+		display: block;
+		color: #e2d8cf;
+		padding: .5em 1.375em;
+		border-bottom: 1px solid #3e0b0a;
+	}
+		#sidebar a:hover{
+			color: #a2787a;
+			text-decoration: none;
+		}
+	
+	
+	#sidebar > section{
+	}
+		/** Fold headings */
+		#sidebar h3{
+			text-align: right;
+			font-size: 1em;
+			margin: 0;
+			padding: .375em 1em;
+			border: 0 solid #461f0f;
+			border-width: 1px 0;
+			background: url("../img/waves.png");
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: auto;
+		}
+			#sidebar > :first-child > h3{
+				border-top: 0;
+			}
+		
+		/** Collapsible part of each sidebar menu */
+		#sidebar .fold{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+
+
+main{
+	padding-top: 3.125em;
+	position: fixed;
+	top:	0;
+	left:	0;
+	right:	0;
+	height:	100vh;
+	overflow: auto;
+}
+	main > article{
+		padding: .5em 1em;
+	}
+		/** Imagery */
+		#band-logo,
+		#band-photo{
+			text-align: center;
+			display: block;
+			line-height: 0;
+			margin: 0 -1em .5em;
+		}
