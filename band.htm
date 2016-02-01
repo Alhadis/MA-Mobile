@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="open-search">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,6 +12,8 @@
 
 <!--[if lt IE 9]><script src="src/js/jquery-1.11.3.js"></script><![endif]-->
 <!--[if gte IE 9]><!--><script src="src/js/jquery-2.1.4.js"></script><!--<![endif]-->
+<script src="src/js/lib/accordion.js"></script>
+<script src="src/js/main.js"></script>
 </head>
 
 
@@ -24,86 +26,88 @@
 	<nav id="sidebar">
 		<h2 class="nonvisual">Site Navigation</h2>
 		
-		<section id="your-profile">
-			<h3>Your Profile</h3>
-			<ul class="fold">
-				<li><a href="user.htm">Alhadis</a></li>
-				<li><a href="user-list-bands.htm">My bands</a></li>
-				<li><a href="user-edit-profile.htm">My profile</a></li>
-				<li><a href="user-edit-collection.htm">My collection</a></li>
-				<li><a href="user-list-reviews.htm">My reviews</a></li>
-				<li><a href="user-list-reports.htm">My reports</a></li>
-				<li><a href="user-list-votes.htm">My band <abbr title="recommendations">recs.</abbr></a></li>
-				<li><a href="bookmarks.htm">My bookmarks</a></li>
-				<li><a href="index.htm">Log out</a></li>
-			</ul>
-		</section>
-		
-		<section id="submissions">
-			<h3>Submissions</h3>
-			<ul class="fold">
-				<li><a href="band-add.htm">Add band</a></li>
-				<li><a href="band-queue.htm">Band queue</a></li>
-				<li><a href="review-queue.htm">Review queue</a></li>
-				<li><a href="blacklist.htm">Blacklist</a></li>
-				<li><a href="deletion-history.htm">Deletion history</a></li>
-			</ul>
-		</section>
-		
-		<section id="help-and-info">
-			<h3>Help &amp; Info</h3>
-			<ul class="fold">
-				<li><a href="help.htm">Help</a></li>
-				<li><a href="rules.htm">Rules</a></li>
-				<li><a href="board/">Forum</a></li>
-				<li><a href="faq.htm">FAQ</a></li>
-				<li><a href="chatroom.htm">Chatroom</a></li>
-				<li><a href="support-us.htm">Support us</a></li>
-				<li><a href="add-ons.htm">Add-ons</a></li>
-			</ul>
-		</section>
-		
-		<section id="browse">
-			<h3>Browse</h3>
-			<ul class="fold">
-				<li><a href="index.htm">Home page</a></li>
-				<li><a href="advanced-search.htm">Advanced search</a></li>
-				<li>
-					Bands
-					<ul>
-						<li><a href="bands-by-letter.htm">Alphabetical</a></li>
-						<li><a href="bands-by-country.htm">Country</a></li>
-						<li><a href="bands-by-genre.htm">Genre</a></li>
-					</ul>
-				</li>
-				<li>
-					Labels
-					<ul>
-						<li><a href="labels-by-letter.htm">Alphabetical</a></li>
-						<li><a href="labels-by-country.htm">Country</a></li>
-					</ul>
-				</li>
-				<li><a href="reviews.htm">Reviews</a></li>
-			</ul>
-		</section>
-		
-		<section id="misc">
-			<h3>Misc</h3>
-			<ul class="fold">
-				<li><a href="rip.htm"><abbr title="Rest in peace">R.I.P.</abbr></a></li>
-				<li><a href="band/random">Random band</a></li>
-				<li><a href="users.htm">User rankings</a></li>
-				<li><a href="news.htm">News archive</a></li>
-			</ul>
-		</section>
-		
-		<section class="fold">
-			<h3>Contribute</h3>
-			<ul>
-				<li><a href="reports.htm">Reports</a></li>
-				<li><a href="to-do.htm">Contribute / To do</a></li>
-			</ul>
-		</section>
+		<div id="sidebar-menus">
+			<section id="your-profile">
+				<h3>Your Profile</h3>
+				<ul class="fold">
+					<li><a href="user.htm">Alhadis</a></li>
+					<li><a href="user-list-bands.htm">My bands</a></li>
+					<li><a href="user-edit-profile.htm">My profile</a></li>
+					<li><a href="user-edit-collection.htm">My collection</a></li>
+					<li><a href="user-list-reviews.htm">My reviews</a></li>
+					<li><a href="user-list-reports.htm">My reports</a></li>
+					<li><a href="user-list-votes.htm">My band <abbr title="recommendations">recs.</abbr></a></li>
+					<li><a href="bookmarks.htm">My bookmarks</a></li>
+					<li><a href="index.htm">Log out</a></li>
+				</ul>
+			</section>
+			
+			<section id="submissions">
+				<h3>Submissions</h3>
+				<ul class="fold">
+					<li><a href="band-add.htm">Add band</a></li>
+					<li><a href="band-queue.htm">Band queue</a></li>
+					<li><a href="review-queue.htm">Review queue</a></li>
+					<li><a href="blacklist.htm">Blacklist</a></li>
+					<li><a href="deletion-history.htm">Deletion history</a></li>
+				</ul>
+			</section>
+			
+			<section id="help-and-info">
+				<h3>Help &amp; Info</h3>
+				<ul class="fold">
+					<li><a href="help.htm">Help</a></li>
+					<li><a href="rules.htm">Rules</a></li>
+					<li><a href="board/">Forum</a></li>
+					<li><a href="faq.htm">FAQ</a></li>
+					<li><a href="chatroom.htm">Chatroom</a></li>
+					<li><a href="support-us.htm">Support us</a></li>
+					<li><a href="add-ons.htm">Add-ons</a></li>
+				</ul>
+			</section>
+			
+			<section id="browse">
+				<h3>Browse</h3>
+				<ul class="fold">
+					<li><a href="index.htm">Home page</a></li>
+					<li><a href="advanced-search.htm">Advanced search</a></li>
+					<li>
+						Bands
+						<ul>
+							<li><a href="bands-by-letter.htm">Alphabetical</a></li>
+							<li><a href="bands-by-country.htm">Country</a></li>
+							<li><a href="bands-by-genre.htm">Genre</a></li>
+						</ul>
+					</li>
+					<li>
+						Labels
+						<ul>
+							<li><a href="labels-by-letter.htm">Alphabetical</a></li>
+							<li><a href="labels-by-country.htm">Country</a></li>
+						</ul>
+					</li>
+					<li><a href="reviews.htm">Reviews</a></li>
+				</ul>
+			</section>
+			
+			<section id="misc">
+				<h3>Misc</h3>
+				<ul class="fold">
+					<li><a href="rip.htm"><abbr title="Rest in peace">R.I.P.</abbr></a></li>
+					<li><a href="band/random">Random band</a></li>
+					<li><a href="users.htm">User rankings</a></li>
+					<li><a href="news.htm">News archive</a></li>
+				</ul>
+			</section>
+			
+			<section class="fold">
+				<h3>Contribute</h3>
+				<ul>
+					<li><a href="reports.htm">Reports</a></li>
+					<li><a href="to-do.htm">Contribute / To do</a></li>
+				</ul>
+			</section>
+		</div>
 		
 		<footer>
 			<p class="copyright">&copy; 2002-2016 Encyclopaedia Metallum</p>
@@ -114,7 +118,7 @@
 
 		
 	<div id="navbar" role="search">
-		<div id="bar-title">Metal Archives</div>
+		<div id="bar-title">Saint Vitus</div>
 		
 		<i id="toggle-sidebar" class="i nav" role="button">Toggle sidebar</i>
 		<i id="toggle-search" class="i search" role="button">Toggle search bar</i>
@@ -146,1211 +150,1216 @@
 			</div>
 		</form>
 		
-		<script>
-			"use strict";
-			{
-				let $             = s => document.querySelector(s);
-				let rootClasses   = document.documentElement.classList;
-				
-				$("#search-query").addEventListener("focus", e => {
-					rootClasses.add("open-search");
-				});
-				
-				$("#search-close").addEventListener("mousedown", e => {
-					rootClasses.remove("open-search");
-					console.log("Closing");
-				});
-			}
-			
-			$("#toggle-sidebar").click(function(){
-				$("html").toggleClass("open-sidebar")
-			});
-			$("#search-type > select").change(function(e){
-				this.previousSibling.data = $(this.options[this.selectedIndex]).text();
-			});
-		</script>
+		<script>setupNav();</script>
 	</div>
 
 
 
 	<main>
 		<article class="band">
-			<a id="band-logo" href="tmp/35_logo.jpg" class="zoomable" title="Click to zoom" role="button"><img src="tmp/35_logo.jpg" alt="Saint Vitus" /></a>
-			<a id="band-photo" href="tmp/35_photo.jpg" class="zoomable" title="Click to zoom" role="button"><img src="tmp/35_photo.jpg" alt="Photo of Saint Vitus" /></a>
+			<header id="page-top">
+				<a id="band-logo" href="tmp/35_logo.png" class="zoomable" title="Click to zoom" role="button"><img src="tmp/35_logo.png" alt="Saint Vitus" /></a>
+				<a id="band-photo" href="tmp/35_photo.jpg" class="zoomable" title="Click to zoom" role="button"><img src="tmp/35_photo.jpg" alt="Photo of Saint Vitus" /></a>
+				<h2 id="page-title"><a href="band.htm">Saint Vitus</a></h2>
+			</header>
 			
-			<h2 id="band-name">Saint Vitus</h2>
 			
 			<dl id="basic-info">
-				<dt>Genre</dt>              <dd>Doom Metal</dd>
-				<dt>Country of origin</dt>  <dd><a href="bands-by-country.htm">United States</a></dd>
-				<dt>Location</dt>           <dd>Los Angeles, California</dd>
-				<dt>Status</dt>             <dd class="status active">Active</dd>
-				<dt>Formed in</dt>          <dd>1980</dd>
-				
+				<dt>Genre</dt>
+				<dd>Doom Metal</dd>
+
+				<dt>Country of origin</dt>
+				<dd><a href="bands-by-country.htm">United States</a></dd>
+
+				<dt>Location</dt>
+				<dd>Los Angeles, California</dd>
+
+				<dt>Status</dt>
+				<dd class="active">Active</dd>
+
+				<dt>Formed in</dt>
+				<dd>1980</dd>
+
 				<dt>Years active</dt>
-				<dd>
+				<dd class="year-ranges">
 					<span>1978-1980 (as <a href="band.htm">Tyrant</a>),</span>
 					<span>1981-1996,</span>
 					<span>2003,</span>
 					<span>2008-present</span>
 				</dd>
-				
+
 				<dt>Lyrical themes</dt>
-				<dd>Drugs, Loneliness, Depression, Substance Abuse, Death, Mental Illness</dd>
-				
+				<dd id="lyrical-themes">Drugs, Loneliness, Depression, Substance Abuse, Death, Mental Illness</dd>
+
 				<dt>Current label</dt>
-				<dd><a href="label.htm">Season of Mist</a></dd>
+				<dd id="current-label"><a href="label.htm">Season of Mist</a></dd>
 			</dl>
-			
-			
-			<section id="biography">
-				<h3>Biography</h3>
-				<div class="fold long-text">One of the first doom metal bands. Influenced by <a href="band.htm">Black Sabbath</a>.
-					
-					Saint Vitus were formed in 1978 under the name <a href="band.htm">Tyrant</a> with <a href="artist.htm">Scott Reagers</a> (vocals), <a href="artist.htm">Dave Chandler</a> (guitar), <a href="artist.htm">Mark Adams</a> (bass), and <a href="artist.htm">Armando Acosta</a> (drums), but changed their name to Saint Vitus in 1981. In the mid-1980s, while <a href="band.htm">The Obsessed</a> were on hiatus, <a href="artist.htm">Scott "Wino" Weinrich</a> would join the band, replacing Scott Reagers, and record with them up until their 1990 album "V". They released two more albums without him (the second with a briefly returning Scott Reagers), before splitting up in 1996. 
-					
-					They briefly reunited for a few shows in 2003, and when <a href="band.htm">Debris Inc.</a> and <a href="band.htm">The Hidden Hand</a> were both put on ice for good by 2008, Saint Vitus decided to stay reunited full time. They released their eighth studio album in 2012, with Wino on vocals. 
-					
-					In autumn 2014, they toured Europe for their 35th anniversary, performing "Born Too Late" in full. However, on November 9th, Wino was detained in Norway, for possession of illegal substances, and deported to the US, leaving the band to finish the tour as a trio.</div>
-			</section>
-			
-			
-			<section id="discography">
-				<h3>Discography</h3>
-				<a href="release-add.htm">Add</a>
-				
-				<div class="fold">
-					
-					<label for="filter-releases">Showing <b>all</b> releases</label>
-					<select id="filter-releases">
-						<option value="">All</option>
-						<option value="1">Main</option>
-						<option value="2">Lives</option>
-						<option value="3">Demos</option>
-						<option value="4">Misc</option>
-					</select>
-					
-					<ul class="all releases"><!-- First class controls the type of releases shown -->
-						<li class="demo release">
-							<a class="title" href="release.htm">1983 Demo</a>
-							<span class="type">Demo</span>
-							<time class="date" datetime="1983">1983</time>
-						</li>
 
-						<li class="full-length release">
-							<a class="title" href="release.htm">Saint Vitus</a>
-							<span class="type">Full-length</span>
-							<time class="date" datetime="1984-02">1984</time>
-							<a class="reviews" href="release-reviews.htm">7 reviews (91% average)</a>
-						</li>
 
-						<li class="demo release">
-							<a class="title" href="release.htm">Hallow's Victim</a>
-							<span class="type">Full-length</span>
-							<time class="date" datetime="1985-08">1985</time>
-							<a class="reviews" href="release-reviews.htm">5 reviews (86% average)</a>
-						</li>
-
-						<li class="ep release">
-							<a class="title" href="release.htm">The Walking Dead</a>
-							<span class="type">EP</span>
-							<time class="date" datetime="1985-10">1985</time>
-							<a class="reviews" href="release-reviews.htm">2 reviews (81% average)</a>
-						</li>
-
-						<li class="split release">
-							<a class="title" href="release.htm">Program: Annihilator - A Soundtrack for Destruction</a>
-							<span class="type">Split</span>
-							<time class="date">1986</time>
-						</li>
-
-						<li class="full-length release">
-							<a class="title" href="release.htm">Born Too Late</a>
-							<span class="type">Full-length</span>
-							<time class="date" datetime="1986-10">1986</time>
-							<a class="reviews" href="release-reviews.htm">10 reviews (94% average)</a>
-						</li>
-
-						<li class="ep release">
-							<a class="title" href="release.htm">Thirsty and Miserable</a>
-							<span class="type">EP</span>
-							<time class="date" datetime="1987-09-27">1987</time>
-							<a class="reviews" href="release-reviews.htm">2 reviews (83% average)</a>
-						</li>
-
-						<li class="full-length release">
-							<a class="title" href="release.htm">Mournful Cries</a>
-							<span class="type">Full-length</span>
-							<time class="date" datetime="1988-08-22">1988</time>
-							<a class="reviews" href="release-reviews.htm">6 reviews (92% average)</a>
-						</li>
-
-						<li class="full-length release">
-							<a class="title" href="release.htm">V</a>
-							<span class="type">Full-length</span>
-							<time class="date" datetime="1990">1990</time>
-							<a class="reviews" href="release-reviews.htm">5 reviews (93% average)</a>
-						</li>
-
-						<li class="live release">
-							<a class="title" href="release.htm">Live</a>
-							<span class="type">Live album</span>
-							<time class="date" datetime="1990-09">1990</time>
-							<a class="reviews" href="release-reviews.htm">2 reviews (92% average)</a>
-						</li>
-
-						<li class="comp release">
-							<a class="title" href="release.htm">Heavier than Thou</a>
-							<span class="type">Compilation</span>
-							<time class="date" datetime="1991-07-01">1991</time>
-							<a class="reviews" href="release-reviews.htm">3 reviews (89% average)</a>
-						</li>
-
-						<li class="full-length release">
-							<a class="title" href="release.htm">C.O.D.</a>
-							<span class="type">Full-length</span>
-							<time class="date" datetime="1992-09">1992</time>
-							<a class="reviews" href="release-reviews.htm">4 reviews (77% average)</a>
-						</li>
-
-						<li class="full-length release">
-							<a class="title" href="release.htm">Die Healing</a>
-							<span class="type">Full-length</span>
-							<time class="date" datetime="1995-05-09">1995</time>
-							<a class="reviews" href="release-reviews.htm">5 reviews (92% average)</a>
-						</li>
-
-						<li class="video release">
-							<a class="title" href="release.htm">Reunion 2003 - Live in Chicago</a>
-							<span class="type">Video</span>
-							<time class="date" datetime="2007">2007</time>
-						</li>
-
-						<li class="comp release">
-							<a class="title" href="release.htm">The Walking Dead / Hallow's Victim</a>
-							<span class="type">Compilation</span>
-							<time class="date" datetime="2010-09-28">2010</time>
-						</li>
-
-						<li class="single release">
-							<a class="title" href="release.htm">Saint Vitus / Born Too Late</a>
-							<span class="type">Single</span>
-							<time class="date" datetime="2011-01">2011</time>
-						</li>
-
-						<li class="single release">
-							<a class="title" href="release.htm">Blessed Night</a>
-							<span class="type">Single</span>
-							<time class="date" datetime="2012-03-23">2012</time>
-						</li>
-
-						<li class="full-length release">
-							<a class="title" href="release.htm">Lillie: F-65</a>
-							<span class="type">Full-length</span>
-							<time class="date" datetime="2012-04-27">2012</time>
-							<a class="reviews" href="release-reviews.htm">6 reviews (85% average)</a>
-						</li>
-
-						<li class="ep release">
-							<a class="title" href="release.htm">Live</a>
-							<span class="type">EP</span>
-							<time class="date" datetime="2012-09-13">2012</time>
-						</li>
-
-						<li class="live release">
-							<a class="title" href="release.htm">Marbles in the Moshpit</a>
-							<span class="type">Live album</span>
-							<time class="date" datetime="2012-12-26">2012</time>
-						</li>
-
-						<li class="split release">
-							<a class="title" href="release.htm">Label Showcase - Season of Mist</a>
-							<span class="type">Split</span>
-							<time class="date" datetime="2013-02-28">2013</time>
-						</li>
-					</ul>
-					
-				</div>
-			</section>
-			
-			
-			
-			<section id="members">
-				<h3>Members</h3>
-				<a href="band-lineup.htm">Edit</a>
-				
-				<div class="fold">
-					<section id="current-members">
-						<h4>Current</h4>
-						<div class="fold">
-
-							<ul>
-								<li class="member">
-									<a class="name" href="artist.htm">Mark Adams</a>
-									<ul class="roles">
-										<li>Bass (1981-1996, 2003, 2008-present)</li>
-									</ul>
-									<div class="see-also">
-										See also:
-										<ul>
-											<li>ex-<a href="band.htm">Tyrant</a></li>
-										</ul>
-									</div>
-								</li>
-								
-								<li>
-									<a class="name" href="artist.htm">Dave Chandler</a>
-									<ul class="roles">
-										<li>Guitars (1981-1996, 2003, 2008-present)</li>
-									</ul>
-									<div class="see-also">
-										See also:
-										<ul>
-											<li>ex-<a href="band.htm">Debris Inc.</a></li>
-											<li>ex-<a href="band.htm">Tyrant</a></li>
-										</ul>
-									</div>
-								</li>
-								
-								<li>
-									<a class="name" href="artist.htm">Scott "Wino" Weinrich</a>
-									<ul class="roles">
-										<li>Vocals (1986-1991, 2003, 2008-present)</li>
-									</ul>
-									<div class="see-also">
-										See also:
-										<ul>
-											<li><a href="band.htm">Spirit Caravan</a></li>
-											<li><a href="band.htm">The Obsessed</a></li>
-											<li><a href="band.htm">Wino</a></li>
-											<li><a href="band.htm">Bedemon</a> (live)</li>
-											<li><a href="band.htm">Shrinebuilder</a></li>
-											<li><a href="band.htm">Probot</a> (live)</li>
-											<li>ex-<a href="band.htm">Premonition 13</a></li>
-											<li>ex-<a href="band.htm">The Hidden Hand</a></li>
-											<li>ex-<a href="band.htm">Shine</a></li>
-											<li>Wino &amp; Conny Ochs</li>
-											<li>ex-<a href="band.htm">Place of Skulls</a></li>
-											<li>ex-<a href="band.htm">The Mentors</a> (live)</li>
-											<li>ex-<a href="band.htm">Lost Breed</a></li>
-											<li>ex-<a href="band.htm">Victor Griffin</a></li>
-										</ul>
-									</div>
-								</li>
-								
-								<li>
-									<a class="name" href="artist.htm">Henry Vasquez</a>
-									<ul class="roles">
-										<li>Drums (2009-present)</li>
-									</ul>
-									<div class="see-also">
-										See also:
-										<ul>
-											<li>ex-<a href="band.htm">Archie Bunker</a></li>
-											<li><a href="band.htm">Blood of the Sun</a></li>
-											<li>ex-<a href="band.htm">Porn</a></li>
-											<li>ex-<a href="band.htm">Sourvein</a></li>
-											<li>ex-<a href="band.htm">Spirit Caravan</a> (live)</li>
-											<li>ex-<a href="band.htm">Debris Inc.</a> (live)</li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-
-						</div>
-					</section>
-
-
-					<section id="past-members">
-						<h4>Past</h4>
-						<div class="fold">
-
-							<ul>
-								<li>
-									<a class="name" href="artist.htm">Armando Acosta</a>
-									<ul class="roles">
-										<li>Drums (1981-1996, 2003, 2008-2009)</li>
-									</ul>
-									<div class="rip">(R.I.P. 2010)</div>
-									<div class="see-also">
-										See also:
-										<ul>
-											<li>ex-<a href="band.htm">Tyrant</a></li>
-											<li>ex-<a href="band.htm">Tactics</a></li>
-											<li>ex-<a href="band.htm">Dirty Red</a></li>
-										</ul>
-									</div>
-								</li>
-
-								<li>
-									<a class="name" href="artist.htm">Scott Reagers</a>
-									<ul class="roles">
-										<li>Vocals (1981-1986, 1994-1996)</li>
-									</ul>
-									<div class="see-also">
-										See also:
-										<ul>
-											<li>ex-<a href="band.htm">Tyrant</a></li>
-										</ul>
-									</div>
-								</li>
-
-								<li>
-									<a class="name" href="artist.htm">Christian Linderson</a>
-									<ul class="roles">
-										<li>Vocals (1992-1994)</li>
-									</ul>
-									<div class="see-also">
-										See also:
-										<ul>
-											<li><a href="band.htm">Goatess</a></li>
-											<li><a href="band.htm">Lord Vicar</a></li>
-											<li>ex-<a href="band.htm">Terra Firma</a></li>
-											<li><a href="band.htm">Digital Devil</a></li>
-											<li>ex-<a href="band.htm">Count Raven</a></li>
-										</ul>
-									</div>
-								</li>
-
-							</ul>
-						</div>
-					</section>
-					
-					
-					<section id="live-members">
-						<h4>Current (Live)</h4>
-						<div class="fold">
-
-							<ul>
-								<li>
-									<a class="name" href="artist.htm">Scott Reagers</a>
-									<ul class="roles">
-										<li>Vocals (2015-present)</li>
-									</ul>
-									<div class="see-also">
-										See also:
-										<ul>
-											<li>ex-<a href="band.htm">Tyrant</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-
-						</div>
-					</section>
-				</div>
-			</section>
-		
-		
-		
-			<section id="reviews">
-				<h3>Reviews</h3>
-				<div class="fold">
-
-					<ul>
-						<li class="review">
-							<a class="for" href="release.htm">Saint Vitus</a>
-							<span class="rating">100%</span>
-							<a class="author" href="user.htm">Doominance</a>
-							<time class="date" datetime="2015-06-22">June 22nd, 2015</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Hallow's Victim</a>
-							<span class="rating">82%</span>
-							<a class="author" href="user.htm">Doominance</a>
-							<time class="date" datetime="2015-01-26">January 26th, 2015</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">100%</span>
-							<a class="author" href="user.htm">Doominance</a>
-							<time class="date" datetime="2015-01-19">January 19th, 2015</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Mournful Cries</a>
-							<span class="rating">99%</span>
-							<a class="author" href="user.htm">Doominance</a>
-							<time class="date" datetime="2015-01-10">January 10th, 2015</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">V</a>
-							<span class="rating">94%</span>
-							<a class="author" href="user.htm">Doominance</a>
-							<time class="date" datetime="2014-12-31">December 31st, 2014</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">C.O.D.</a>
-							<span class="rating">75%</span>
-							<a class="author" href="user.htm">Doominance</a>
-							<time class="date" datetime="2014-10-05">October 5th, 2014</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Die Healing</a>
-							<span class="rating">100%</span>
-							<a class="author" href="user.htm">Doominance</a>
-							<time class="date" datetime="2014-07-08">July 8th, 2014</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Mournful Cries</a>
-							<span class="rating">100%</span>
-							<a class="author" href="user.htm">ClusterFuct</a>
-							<time class="date" datetime="2014-06-28">June 28th, 2014</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">C.O.D.</a>
-							<span class="rating">75%</span>
-							<a class="author" href="user.htm">Witchfvcker</a>
-							<time class="date" datetime="2014-04-24">April 24th, 2014</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Die Healing</a>
-							<span class="rating">95%</span>
-							<a class="author" href="user.htm">Witchfvcker</a>
-							<time class="date" datetime="2014-04-24">April 24th, 2014</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Lillie: F-65</a>
-							<span class="rating">91%</span>
-							<a class="author" href="user.htm">Doominance</a>
-							<time class="date" datetime="2014-01-25">January 25th, 2014</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Saint Vitus</a>
-							<span class="rating">90%</span>
-							<a class="author" href="user.htm">Xyston</a>
-							<time class="date" datetime="2013-12-20">December 20th, 2013</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">C.O.D.</a>
-							<span class="rating">73%</span>
-							<a class="author" href="user.htm">GuntherTheUndying</a>
-							<time class="date" datetime="2013-11-17">November 17th, 2013</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Die Healing</a>
-							<span class="rating">93%</span>
-							<a class="author" href="user.htm">GuntherTheUndying</a>
-							<time class="date" datetime="2013-11-01">November 1st, 2013</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Lillie: F-65</a>
-							<span class="rating">95%</span>
-							<a class="author" href="user.htm">Twisted_Psychology</a>
-							<time class="date" datetime="2013-05-23">May 23rd, 2013</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Heavier than Thou</a>
-							<span class="rating">88%</span>
-							<a class="author" href="user.htm">hippie_holocaust</a>
-							<time class="date" datetime="2013-01-08">January 8th, 2013</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">V</a>
-							<span class="rating">97%</span>
-							<a class="author" href="user.htm">hippie_holocaust</a>
-							<time class="date" datetime="2012-12-26">December 26th, 2012</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Hallow's Victim</a>
-							<span class="rating">85%</span>
-							<a class="author" href="user.htm">hippie_holocaust</a>
-							<time class="date" datetime="2012-12-15">December 15th, 2012</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Lillie: F-65</a>
-							<span class="rating">79%</span>
-							<a class="author" href="user.htm">volvandese</a>
-							<time class="date" datetime="2012-10-11">October 11th, 2012</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Lillie: F-65</a>
-							<span class="rating">95%</span>
-							<a class="author" href="user.htm">hippie_holocaust</a>
-							<time class="date" datetime="2012-10-01">October 1st, 2012</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Lillie: F-65</a>
-							<span class="rating">68%</span>
-							<a class="author" href="user.htm">TheStormIRide</a>
-							<time class="date" datetime="2012-08-05">August 5th, 2012</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Lillie: F-65</a>
-							<span class="rating">80%</span>
-							<a class="author" href="user.htm">todesengel89</a>
-							<time class="date" datetime="2012-07-10">July 10th, 2012</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">100%</span>
-							<a class="author" href="user.htm">SetAbominae6</a>
-							<time class="date" datetime="2012-02-17">February 17th, 2012</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Thirsty and Miserable</a>
-							<span class="rating">84%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2011-03-18">March 18th, 2011</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">The Walking Dead</a>
-							<span class="rating">76%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2011-03-18">March 18th, 2011</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">100%</span>
-							<a class="author" href="user.htm">SleepingFinger</a>
-							<time class="date" datetime="2010-07-21">July 21st, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Die Healing</a>
-							<span class="rating">86%</span>
-							<a class="author" href="user.htm">Abominatrix</a>
-							<time class="date" datetime="2010-03-23">March 23rd, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Mournful Cries</a>
-							<span class="rating">94%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2010-03-16">March 16th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">C.O.D.</a>
-							<span class="rating">84%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2010-03-15">March 15th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Live</a>
-							<span class="rating">83%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2010-03-15">March 15th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">V</a>
-							<span class="rating">91%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2010-03-15">March 15th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">81%</span>
-							<a class="author" href="user.htm">lord_ghengis</a>
-							<time class="date" datetime="2010-02-25">February 25th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Hallow's Victim</a>
-							<span class="rating">82%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2010-02-25">February 25th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Saint Vitus</a>
-							<span class="rating">89%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2010-02-23">February 23rd, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">93%</span>
-							<a class="author" href="user.htm">Twisted_Psychology</a>
-							<time class="date" datetime="2010-02-14">February 14th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Thirsty and Miserable</a>
-							<span class="rating">82%</span>
-							<a class="author" href="user.htm">thomash</a>
-							<time class="date" datetime="2010-02-09">February 9th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">97%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2010-02-09">February 9th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Saint Vitus</a>
-							<span class="rating">90%</span>
-							<a class="author" href="user.htm">Byrgan</a>
-							<time class="date" datetime="2010-01-31">January 31st, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">V</a>
-							<span class="rating">93%</span>
-							<a class="author" href="user.htm">Acrobat</a>
-							<time class="date" datetime="2010-01-28">January 28th, 2010</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">V</a>
-							<span class="rating">89%</span>
-							<a class="author" href="user.htm">stonetotem</a>
-							<time class="date" datetime="2009-06-19">June 19th, 2009</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Heavier than Thou</a>
-							<span class="rating">95%</span>
-							<a class="author" href="user.htm">SoylentGreenIsPeople</a>
-							<time class="date" datetime="2009-05-15">May 15th, 2009</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Mournful Cries</a>
-							<span class="rating">87%</span>
-							<a class="author" href="user.htm">Scotar</a>
-							<time class="date" datetime="2009-03-23">March 23rd, 2009</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Saint Vitus</a>
-							<span class="rating">93%</span>
-							<a class="author" href="user.htm">iiix</a>
-							<time class="date" datetime="2009-01-06">January 6th, 2009</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">88%</span>
-							<a class="author" href="user.htm">marktheviktor</a>
-							<time class="date" datetime="2008-12-30">December 30th, 2008</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Heavier than Thou</a>
-							<span class="rating">85%</span>
-							<a class="author" href="user.htm">hells_unicorn</a>
-							<time class="date" datetime="2008-11-30">November 30th, 2008</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Hallow's Victim</a>
-							<span class="rating">97%</span>
-							<a class="author" href="user.htm">DeathForBlitzkrieg</a>
-							<time class="date" datetime="2008-04-15">April 15th, 2008</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Hallow's Victim</a>
-							<span class="rating">85%</span>
-							<a class="author" href="user.htm">Abominatrix</a>
-							<time class="date" datetime="2007-06-04">June 4th, 2007</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Mournful Cries</a>
-							<span class="rating">86%</span>
-							<a class="author" href="user.htm">erickg13</a>
-							<time class="date" datetime="2007-04-02">April 2nd, 2007</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">90%</span>
-							<a class="author" href="user.htm">brocashelm</a>
-							<time class="date" datetime="2006-06-14">June 14th, 2006</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Mournful Cries</a>
-							<span class="rating">85%</span>
-							<a class="author" href="user.htm">brocashelm</a>
-							<time class="date" datetime="2006-06-14">June 14th, 2006</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Die Healing</a>
-							<span class="rating">85%</span>
-							<a class="author" href="user.htm">brocashelm</a>
-							<time class="date" datetime="2006-04-20">April 20th, 2006</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Saint Vitus</a>
-							<span class="rating">85%</span>
-							<a class="author" href="user.htm">brocashelm</a>
-							<time class="date" datetime="2006-04-18">April 18th, 2006</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">87%</span>
-							<a class="author" href="user.htm">subjugator</a>
-							<time class="date" datetime="2006-04-16">April 16th, 2006</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Born Too Late</a>
-							<span class="rating">99%</span>
-							<a class="author" href="user.htm">Danthrax_Nasty</a>
-							<time class="date" datetime="2005-10-07">October 7th, 2005</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">The Walking Dead</a>
-							<span class="rating">85%</span>
-							<a class="author" href="user.htm">vomitpuslicker</a>
-							<time class="date" datetime="2005-04-29">April 29th, 2005</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Live</a>
-							<span class="rating">100%</span>
-							<a class="author" href="user.htm">Unsilent_Storms</a>
-							<time class="date" datetime="2004-11-17">November 17th, 2004</time>
-						</li>
-
-						<li class="review">
-							<a class="for" href="release.htm">Saint Vitus</a>
-							<span class="rating">92%</span>
-							<a class="author" href="user.htm">Abominatrix</a>
-							<time class="date" datetime="2004-02-18">February 18th, 2004</time>
-						</li>
-					</ul>
-
-				</div>
-			</section>
-			
-			
-			
-			<section id="similar-artists">
-				<h3>Similar Artists</h3>
-				<a href="#">Add</a>
-				<a href="band-votes-edit.htm">Edit</a>
-				
-				<div class="fold">
-					
-					<ol>
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Black Sabbath</div>
-							<div class="country">United Kingdom</div>
-							<div class="genre">Heavy/Doom Metal</div>
-							<div class="score">199</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Pentagram</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">140</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">The Obsessed</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">70</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Cathedral</div>
-							<div class="country">United Kingdom</div>
-							<div class="genre">Doom/Stoner Metal</div>
-							<div class="score">62</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Witchfinder General</div>
-							<div class="country">United Kingdom</div>
-							<div class="genre">NWOBHM, Doom Metal</div>
-							<div class="score">60</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Count Raven</div>
-							<div class="country">Sweden</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">59</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Reverend Bizarre</div>
-							<div class="country">Finland</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">58</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Candlemass</div>
-							<div class="country">Sweden</div>
-							<div class="genre">Epic Doom Metal</div>
-							<div class="score">53</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Trouble</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom Metal, Psychedelic/Stoner Metal (later)</div>
-							<div class="score">47</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">The Gates of Slumber</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">47</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Lord Vicar</div>
-							<div class="country">Finland</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">36</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Iron Man</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">34</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Spirit Caravan</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom/Stoner Metal</div>
-							<div class="score">27</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Wino</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom/Stoner Metal</div>
-							<div class="score">23</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Orchid</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">23</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Blood Farmers</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">21</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Devil</div>
-							<div class="country">Norway</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">17</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Tyrant</div>
-							<div class="country">United States</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">17</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Children of Doom</div>
-							<div class="country">France</div>
-							<div class="genre">Doom Metal</div>
-							<div class="score">16</div>
-						</li>
-
-						<li>
-							<div class="vote">
-								<a class="up">Vote up</a>
-								<a class="down">Vote down</a>
-							</div>
-							
-							<div class="name">Church of Misery</div>
-							<div class="country">Japan</div>
-							<div class="genre">Doom/Stoner Metal</div>
-							<div class="score">14</div>
-						</li>
-					</ol>
-					
-					<a class="see-more" href="band-votes.htm">See more&hellip;</a>
-				</div>
-			</section>
-			
-			
-			<section id="related-links">
-				<h3>Related Links</h3>
-				<a href="#">Add</a>
-				
-				<div class="fold">
-					
-					<h4>Official</h4>
-					<div class="fold">
-						<ul>
-							<li><a href="http://saintvitus.bandcamp.com/" target="_blank">Bandcamp</a></li>
-							<li><a href="https://www.facebook.com/saintvitusofficial" target="_blank">Facebook</a></li>
-							<li><a href="http://www.saintvitusband.com/" target="_blank">Homepage</a></li>
-							<li><a href="http://myspace.com/stvitus" target="_blank">Myspace</a></li>
-							<li><a href="http://www.reverbnation.com/saintvitus" target="_blank">ReverbNation</a></li>
-							<li><a href="https://twitter.com/SAINTVITUSBAND" target="_blank">Twitter</a></li>
-						</ul>
-					</div>
-
-					<h4>Official merchandise</h4>
-					<div class="fold">
-						<ul>
-							<li><a href="http://www.illrockmerch.com/St-Vitus-s/766.htm" target="_blank">Ill Rock Merch</a></li>
-							<li><a href="http://itunes.apple.com/us/artist/saint-vitus/id117747948" target="_blank">iTunes</a></li>
-							<li><a href="http://www.rockabilia.com/browse/artists-groups/s/saint-vitus.html" target="_blank">Rockabilia</a></li>
-							<li><a href="http://e-shop.season-of-mist.com/en/bands/saint-vitus/1748" target="_blank">Season of Mist</a></li>
-							<li><a href="http://www.shopbenchmark.com/saintvitus/" target="_blank">Shopbenchmark</a></li>
-							<li><a href="http://www.value-merch.de/saintvitus" target="_blank">Value Merch</a></li>
-						</ul>
-					</div>
-					
-					<h4>Unofficial</h4>
-					<div class="fold">
-						<ul>
-							<li><a href="https://www.facebook.com/SaintVitusPL" target="_blank">Facebook (Polish)</a></li>
-							<li><a href="http://iconosquare.com/tag/saintvitus" target="_blank">Instagram</a></li>
-							<li><a href="http://myspace.com/saintvitusband" target="_blank">Myspace</a></li>
-						</ul>
-					</div>
-
-					<h4>Labels</h4>
-					<div class="fold">
-						<ul>
-							<li><a href="http://www.season-of-mist.com/bands/saint-vitus" target="_blank">Season of Mist</a></li>
-						</ul>
-					</div>
-
-					<h4>Tablatures</h4>
-					<div class="fold">
-						<ul>
-							<li><a href="http://www.911tabs.com/tabs/s/saint_vitus/" target="_blank">911Tabs</a></li>
-							<li><a href="http://www.ultimate-guitar.com/tabs/saint_vitus_tabs.htm" target="_blank">Ultimate-Guitar.com</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			
-			
-			<section id="buy-their-stuff">
-				<h3>Buy their stuff</h3>
-				<div class="fold">
-					
-					<ul>
-						<li><a href="#">Buy from No Remorse</a></li>
-						<li><a href="#">Buy from BlackScaped</a>
-						<li>
-							<a href="#">Search on Amazon.com</a>
-							<span class="toggle"><span>more</span>&hellip; &gt;&gt;</span>
-							<ul>
-								<li><a href="#">Amazon Canada</a></li>
-								<li><a href="#">Amazon France</a></li>
-								<li><a href="#">Amazon Germany</a></li>
-								<li><a href="#">Amazon UK</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Search on eBay</a>
-							<span class="toggle"><span>more</span>&hellip; &gt;&gt;</span>
-							<ul>
-								<li><a href="#">Search on Half.com</a></li>
-								<li><a href="#">eBay Canada</a></li>
-								<li><a href="#">eBay UK</a></li>
-								<li><a href="#">eBay France</a></li>
-								<li><a href="#">eBay Spain</a></li>
-								<li><a href="#">eBay Belgium</a></li>
-								<li><a href="#">eBay Netherlands</a></li>
-								<li><a href="#">eBay Italy</a></li>
-								<li><a href="#">eBay Australia</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Search on Gemm.com</a></li>
-					</ul>
-					
-				</div>
-			</section>
-			
-			
-			<section id="reports">
-				<h3>Reports</h3>
-				<div class="fold">
-					
-					<ul>
-						<li id="report-431772">
-							<a class="permalink" href="report.htm">View this report</a>
-							<div class="category">Lineup correction</div>
-							<div class="status">unassigned</div>
-							<dl class="reported">
-								<dt class="by">Reported by</dt>
-								<dd class="by"><a href="user.htm">Muhammadabbadabba</a></dd>
-								
-								<dt class="on">Date</dt>
-								<dd class="on"><time>2015-12-20 20:23:05</time>
-							</dl>
-						</li>
+			<div id="page-sections" class="accordion">
+				<section id="biography">
+					<h3>Biography</h3>
+					<div class="fold long-text">One of the first doom metal bands. Influenced by <a href="band.htm">Black Sabbath</a>.
 						
-						<li id="report-">
-							<a class="permalink" href="report.htm">View this report</a>
-							<div class="category">General update / mistakes</div>
-							<div class="status">resolved</div>
-							<dl class="reported">
-								<dt class="by">Reported by</dt>
-								<dd class="by"><a href="user.htm">Yankis</a></dd>
-								
-								<dt class="on">Date</dt>
-								<dd class="on"><time>2015-02-23 15:50:10</time>
-							</dl>
-						</li>
+						Saint Vitus were formed in 1978 under the name <a href="band.htm">Tyrant</a> with <a href="artist.htm">Scott Reagers</a> (vocals), <a href="artist.htm">Dave Chandler</a> (guitar), <a href="artist.htm">Mark Adams</a> (bass), and <a href="artist.htm">Armando Acosta</a> (drums), but changed their name to Saint Vitus in 1981. In the mid-1980s, while <a href="band.htm">The Obsessed</a> were on hiatus, <a href="artist.htm">Scott "Wino" Weinrich</a> would join the band, replacing Scott Reagers, and record with them up until their 1990 album "V". They released two more albums without him (the second with a briefly returning Scott Reagers), before splitting up in 1996. 
 						
-						<li id="report-545092">
-							<a class="permalink" href="report.htm">View this report</a>
-							<div class="category">Should be removed</div>
-							<div class="status">unassigned</div>
-							<dl class="reported">
-								<dt class="by">Reported by</dt>
-								<dd class="by"><a href="user.htm">Muhammadabbadabba</a></dd>
-								
-								<dt class="on">Date</dt>
-								<dd class="on"><time>2015-12-20 20:23:05</time>
-							</dl>
-						</li>
-					</ul>
+						They briefly reunited for a few shows in 2003, and when <a href="band.htm">Debris Inc.</a> and <a href="band.htm">The Hidden Hand</a> were both put on ice for good by 2008, Saint Vitus decided to stay reunited full time. They released their eighth studio album in 2012, with Wino on vocals. 
+						
+						In autumn 2014, they toured Europe for their 35th anniversary, performing "Born Too Late" in full. However, on November 9th, Wino was detained in Norway, for possession of illegal substances, and deported to the US, leaving the band to finish the tour as a trio.</div>
+				</section>
+				
+				
+				<section id="discography">
+					<h3>Discography</h3>
 					
-				</div>
-			</section>
+					<div class="actions">
+						<a class="add sigil" href="release-add.htm">Add</a>
+					</div>
+					
+					<div class="fold">
+						
+						<label for="filter-releases">Showing <b>all</b> releases</label>
+						<select id="filter-releases">
+							<option value="">All</option>
+							<option value="1">Main</option>
+							<option value="2">Lives</option>
+							<option value="3">Demos</option>
+							<option value="4">Misc</option>
+						</select>
+						
+						<ul class="all releases"><!-- First class controls the type of releases shown -->
+							<li class="demo release">
+								<a class="title" href="release.htm">1983 Demo</a>
+								<span class="type">Demo</span>
+								<time class="date" datetime="1983">1983</time>
+							</li>
+
+							<li class="full-length release">
+								<a class="title" href="release.htm">Saint Vitus</a>
+								<span class="type">Full-length</span>
+								<time class="date" datetime="1984-02">1984</time>
+								<a class="reviews" href="release-reviews.htm">7 reviews (91% average)</a>
+							</li>
+
+							<li class="demo release">
+								<a class="title" href="release.htm">Hallow's Victim</a>
+								<span class="type">Full-length</span>
+								<time class="date" datetime="1985-08">1985</time>
+								<a class="reviews" href="release-reviews.htm">5 reviews (86% average)</a>
+							</li>
+
+							<li class="ep release">
+								<a class="title" href="release.htm">The Walking Dead</a>
+								<span class="type">EP</span>
+								<time class="date" datetime="1985-10">1985</time>
+								<a class="reviews" href="release-reviews.htm">2 reviews (81% average)</a>
+							</li>
+
+							<li class="split release">
+								<a class="title" href="release.htm">Program: Annihilator - A Soundtrack for Destruction</a>
+								<span class="type">Split</span>
+								<time class="date">1986</time>
+							</li>
+
+							<li class="full-length release">
+								<a class="title" href="release.htm">Born Too Late</a>
+								<span class="type">Full-length</span>
+								<time class="date" datetime="1986-10">1986</time>
+								<a class="reviews" href="release-reviews.htm">10 reviews (94% average)</a>
+							</li>
+
+							<li class="ep release">
+								<a class="title" href="release.htm">Thirsty and Miserable</a>
+								<span class="type">EP</span>
+								<time class="date" datetime="1987-09-27">1987</time>
+								<a class="reviews" href="release-reviews.htm">2 reviews (83% average)</a>
+							</li>
+
+							<li class="full-length release">
+								<a class="title" href="release.htm">Mournful Cries</a>
+								<span class="type">Full-length</span>
+								<time class="date" datetime="1988-08-22">1988</time>
+								<a class="reviews" href="release-reviews.htm">6 reviews (92% average)</a>
+							</li>
+
+							<li class="full-length release">
+								<a class="title" href="release.htm">V</a>
+								<span class="type">Full-length</span>
+								<time class="date" datetime="1990">1990</time>
+								<a class="reviews" href="release-reviews.htm">5 reviews (93% average)</a>
+							</li>
+
+							<li class="live release">
+								<a class="title" href="release.htm">Live</a>
+								<span class="type">Live album</span>
+								<time class="date" datetime="1990-09">1990</time>
+								<a class="reviews" href="release-reviews.htm">2 reviews (92% average)</a>
+							</li>
+
+							<li class="comp release">
+								<a class="title" href="release.htm">Heavier than Thou</a>
+								<span class="type">Compilation</span>
+								<time class="date" datetime="1991-07-01">1991</time>
+								<a class="reviews" href="release-reviews.htm">3 reviews (89% average)</a>
+							</li>
+
+							<li class="full-length release">
+								<a class="title" href="release.htm">C.O.D.</a>
+								<span class="type">Full-length</span>
+								<time class="date" datetime="1992-09">1992</time>
+								<a class="reviews" href="release-reviews.htm">4 reviews (77% average)</a>
+							</li>
+
+							<li class="full-length release">
+								<a class="title" href="release.htm">Die Healing</a>
+								<span class="type">Full-length</span>
+								<time class="date" datetime="1995-05-09">1995</time>
+								<a class="reviews" href="release-reviews.htm">5 reviews (92% average)</a>
+							</li>
+
+							<li class="video release">
+								<a class="title" href="release.htm">Reunion 2003 - Live in Chicago</a>
+								<span class="type">Video</span>
+								<time class="date" datetime="2007">2007</time>
+							</li>
+
+							<li class="comp release">
+								<a class="title" href="release.htm">The Walking Dead / Hallow's Victim</a>
+								<span class="type">Compilation</span>
+								<time class="date" datetime="2010-09-28">2010</time>
+							</li>
+
+							<li class="single release">
+								<a class="title" href="release.htm">Saint Vitus / Born Too Late</a>
+								<span class="type">Single</span>
+								<time class="date" datetime="2011-01">2011</time>
+							</li>
+
+							<li class="single release">
+								<a class="title" href="release.htm">Blessed Night</a>
+								<span class="type">Single</span>
+								<time class="date" datetime="2012-03-23">2012</time>
+							</li>
+
+							<li class="full-length release">
+								<a class="title" href="release.htm">Lillie: F-65</a>
+								<span class="type">Full-length</span>
+								<time class="date" datetime="2012-04-27">2012</time>
+								<a class="reviews" href="release-reviews.htm">6 reviews (85% average)</a>
+							</li>
+
+							<li class="ep release">
+								<a class="title" href="release.htm">Live</a>
+								<span class="type">EP</span>
+								<time class="date" datetime="2012-09-13">2012</time>
+							</li>
+
+							<li class="live release">
+								<a class="title" href="release.htm">Marbles in the Moshpit</a>
+								<span class="type">Live album</span>
+								<time class="date" datetime="2012-12-26">2012</time>
+							</li>
+
+							<li class="split release">
+								<a class="title" href="release.htm">Label Showcase - Season of Mist</a>
+								<span class="type">Split</span>
+								<time class="date" datetime="2013-02-28">2013</time>
+							</li>
+						</ul>
+						
+					</div>
+				</section>
+				
+				
+				
+				<section id="members" class="open">
+					<h3>Members</h3>
+					
+					<div class="actions">
+						<a class="edit sigil" href="band-lineup.htm">Edit</a>
+					</div>
+					
+					<div class="fold">
+						<div id="lineups" class="accordion">
+							
+							<section id="current-members" class="open">
+								<h4>Current</h4>
+								<div class="fold">
+
+									<ul>
+										<li class="member">
+											<a class="name" href="artist.htm">Mark Adams</a>
+											<ul class="roles">
+												<li>Bass (1981-1996, 2003, 2008-present)</li>
+											</ul>
+											<div class="see-also">
+												See also:
+												<ul>
+													<li>ex-<a href="band.htm">Tyrant</a></li>
+												</ul>
+											</div>
+										</li>
+										
+										<li class="member">
+											<a class="name" href="artist.htm">Dave Chandler</a>
+											<ul class="roles">
+												<li>Guitars (1981-1996, 2003, 2008-present)</li>
+											</ul>
+											<div class="see-also">
+												See also:
+												<ul>
+													<li>ex-<a href="band.htm">Debris Inc.</a></li>
+													<li>ex-<a href="band.htm">Tyrant</a></li>
+												</ul>
+											</div>
+										</li>
+										
+										<li class="member">
+											<a class="name" href="artist.htm">Scott "Wino" Weinrich</a>
+											<ul class="roles">
+												<li>Vocals (1986-1991, 2003, 2008-present)</li>
+											</ul>
+											<div class="see-also">
+												See also:
+												<ul>
+													<li><a href="band.htm">Spirit Caravan</a></li>
+													<li><a href="band.htm">The Obsessed</a></li>
+													<li><a href="band.htm">Wino</a></li>
+													<li><a href="band.htm">Bedemon</a> (live)</li>
+													<li><a href="band.htm">Shrinebuilder</a></li>
+													<li><a href="band.htm">Probot</a> (live)</li>
+													<li>ex-<a href="band.htm">Premonition 13</a></li>
+													<li>ex-<a href="band.htm">The Hidden Hand</a></li>
+													<li>ex-<a href="band.htm">Shine</a></li>
+													<li>Wino &amp; Conny Ochs</li>
+													<li>ex-<a href="band.htm">Place of Skulls</a></li>
+													<li>ex-<a href="band.htm">The Mentors</a> (live)</li>
+													<li>ex-<a href="band.htm">Lost Breed</a></li>
+													<li>ex-<a href="band.htm">Victor Griffin</a></li>
+												</ul>
+											</div>
+										</li>
+										
+										<li class="member">
+											<a class="name" href="artist.htm">Henry Vasquez</a>
+											<ul class="roles">
+												<li>Drums (2009-present)</li>
+											</ul>
+											<div class="see-also">
+												See also:
+												<ul>
+													<li>ex-<a href="band.htm">Archie Bunker</a></li>
+													<li><a href="band.htm">Blood of the Sun</a></li>
+													<li>ex-<a href="band.htm">Porn</a></li>
+													<li>ex-<a href="band.htm">Sourvein</a></li>
+													<li>ex-<a href="band.htm">Spirit Caravan</a> (live)</li>
+													<li>ex-<a href="band.htm">Debris Inc.</a> (live)</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+
+								</div>
+							</section>
+
+
+							<section id="past-members">
+								<h4>Past</h4>
+								<div class="fold">
+
+									<ul>
+										<li class="member">
+											<a class="name" href="artist.htm">Armando Acosta</a>
+											<ul class="roles">
+												<li>Drums (1981-1996, 2003, 2008-2009)</li>
+											</ul>
+											<div class="rip">(R.I.P. 2010)</div>
+											<div class="see-also">
+												See also:
+												<ul>
+													<li>ex-<a href="band.htm">Tyrant</a></li>
+													<li>ex-<a href="band.htm">Tactics</a></li>
+													<li>ex-<a href="band.htm">Dirty Red</a></li>
+												</ul>
+											</div>
+										</li>
+
+										<li class="member">
+											<a class="name" href="artist.htm">Scott Reagers</a>
+											<ul class="roles">
+												<li>Vocals (1981-1986, 1994-1996)</li>
+											</ul>
+											<div class="see-also">
+												See also:
+												<ul>
+													<li>ex-<a href="band.htm">Tyrant</a></li>
+												</ul>
+											</div>
+										</li>
+
+										<li class="member">
+											<a class="name" href="artist.htm">Christian Linderson</a>
+											<ul class="roles">
+												<li>Vocals (1992-1994)</li>
+											</ul>
+											<div class="see-also">
+												See also:
+												<ul>
+													<li><a href="band.htm">Goatess</a></li>
+													<li><a href="band.htm">Lord Vicar</a></li>
+													<li>ex-<a href="band.htm">Terra Firma</a></li>
+													<li><a href="band.htm">Digital Devil</a></li>
+													<li>ex-<a href="band.htm">Count Raven</a></li>
+												</ul>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</section>
+							
+							
+							<section id="live-members">
+								<h4>Current (Live)</h4>
+								<div class="fold">
+
+									<ul>
+										<li class="member">
+											<a class="name" href="artist.htm">Scott Reagers</a>
+											<ul class="roles">
+												<li>Vocals (2015-present)</li>
+											</ul>
+											<div class="see-also">
+												See also:
+												<ul>
+													<li>ex-<a href="band.htm">Tyrant</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+
+								</div>
+							</section>
+						
+						</div>
+					</div>
+				</section>
 			
+			
+			
+				<section id="reviews">
+					<h3>Reviews</h3>
+					<div class="fold">
+
+						<ul>
+							<li class="review">
+								<a class="for" href="release.htm">Saint Vitus</a>
+								<span class="rating">100%</span>
+								<a class="author" href="user.htm">Doominance</a>
+								<time class="date" datetime="2015-06-22">June 22nd, 2015</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Hallow's Victim</a>
+								<span class="rating">82%</span>
+								<a class="author" href="user.htm">Doominance</a>
+								<time class="date" datetime="2015-01-26">January 26th, 2015</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">100%</span>
+								<a class="author" href="user.htm">Doominance</a>
+								<time class="date" datetime="2015-01-19">January 19th, 2015</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Mournful Cries</a>
+								<span class="rating">99%</span>
+								<a class="author" href="user.htm">Doominance</a>
+								<time class="date" datetime="2015-01-10">January 10th, 2015</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">V</a>
+								<span class="rating">94%</span>
+								<a class="author" href="user.htm">Doominance</a>
+								<time class="date" datetime="2014-12-31">December 31st, 2014</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">C.O.D.</a>
+								<span class="rating">75%</span>
+								<a class="author" href="user.htm">Doominance</a>
+								<time class="date" datetime="2014-10-05">October 5th, 2014</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Die Healing</a>
+								<span class="rating">100%</span>
+								<a class="author" href="user.htm">Doominance</a>
+								<time class="date" datetime="2014-07-08">July 8th, 2014</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Mournful Cries</a>
+								<span class="rating">100%</span>
+								<a class="author" href="user.htm">ClusterFuct</a>
+								<time class="date" datetime="2014-06-28">June 28th, 2014</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">C.O.D.</a>
+								<span class="rating">75%</span>
+								<a class="author" href="user.htm">Witchfvcker</a>
+								<time class="date" datetime="2014-04-24">April 24th, 2014</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Die Healing</a>
+								<span class="rating">95%</span>
+								<a class="author" href="user.htm">Witchfvcker</a>
+								<time class="date" datetime="2014-04-24">April 24th, 2014</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Lillie: F-65</a>
+								<span class="rating">91%</span>
+								<a class="author" href="user.htm">Doominance</a>
+								<time class="date" datetime="2014-01-25">January 25th, 2014</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Saint Vitus</a>
+								<span class="rating">90%</span>
+								<a class="author" href="user.htm">Xyston</a>
+								<time class="date" datetime="2013-12-20">December 20th, 2013</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">C.O.D.</a>
+								<span class="rating">73%</span>
+								<a class="author" href="user.htm">GuntherTheUndying</a>
+								<time class="date" datetime="2013-11-17">November 17th, 2013</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Die Healing</a>
+								<span class="rating">93%</span>
+								<a class="author" href="user.htm">GuntherTheUndying</a>
+								<time class="date" datetime="2013-11-01">November 1st, 2013</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Lillie: F-65</a>
+								<span class="rating">95%</span>
+								<a class="author" href="user.htm">Twisted_Psychology</a>
+								<time class="date" datetime="2013-05-23">May 23rd, 2013</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Heavier than Thou</a>
+								<span class="rating">88%</span>
+								<a class="author" href="user.htm">hippie_holocaust</a>
+								<time class="date" datetime="2013-01-08">January 8th, 2013</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">V</a>
+								<span class="rating">97%</span>
+								<a class="author" href="user.htm">hippie_holocaust</a>
+								<time class="date" datetime="2012-12-26">December 26th, 2012</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Hallow's Victim</a>
+								<span class="rating">85%</span>
+								<a class="author" href="user.htm">hippie_holocaust</a>
+								<time class="date" datetime="2012-12-15">December 15th, 2012</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Lillie: F-65</a>
+								<span class="rating">79%</span>
+								<a class="author" href="user.htm">volvandese</a>
+								<time class="date" datetime="2012-10-11">October 11th, 2012</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Lillie: F-65</a>
+								<span class="rating">95%</span>
+								<a class="author" href="user.htm">hippie_holocaust</a>
+								<time class="date" datetime="2012-10-01">October 1st, 2012</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Lillie: F-65</a>
+								<span class="rating">68%</span>
+								<a class="author" href="user.htm">TheStormIRide</a>
+								<time class="date" datetime="2012-08-05">August 5th, 2012</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Lillie: F-65</a>
+								<span class="rating">80%</span>
+								<a class="author" href="user.htm">todesengel89</a>
+								<time class="date" datetime="2012-07-10">July 10th, 2012</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">100%</span>
+								<a class="author" href="user.htm">SetAbominae6</a>
+								<time class="date" datetime="2012-02-17">February 17th, 2012</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Thirsty and Miserable</a>
+								<span class="rating">84%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2011-03-18">March 18th, 2011</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">The Walking Dead</a>
+								<span class="rating">76%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2011-03-18">March 18th, 2011</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">100%</span>
+								<a class="author" href="user.htm">SleepingFinger</a>
+								<time class="date" datetime="2010-07-21">July 21st, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Die Healing</a>
+								<span class="rating">86%</span>
+								<a class="author" href="user.htm">Abominatrix</a>
+								<time class="date" datetime="2010-03-23">March 23rd, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Mournful Cries</a>
+								<span class="rating">94%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2010-03-16">March 16th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">C.O.D.</a>
+								<span class="rating">84%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2010-03-15">March 15th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Live</a>
+								<span class="rating">83%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2010-03-15">March 15th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">V</a>
+								<span class="rating">91%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2010-03-15">March 15th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">81%</span>
+								<a class="author" href="user.htm">lord_ghengis</a>
+								<time class="date" datetime="2010-02-25">February 25th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Hallow's Victim</a>
+								<span class="rating">82%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2010-02-25">February 25th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Saint Vitus</a>
+								<span class="rating">89%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2010-02-23">February 23rd, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">93%</span>
+								<a class="author" href="user.htm">Twisted_Psychology</a>
+								<time class="date" datetime="2010-02-14">February 14th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Thirsty and Miserable</a>
+								<span class="rating">82%</span>
+								<a class="author" href="user.htm">thomash</a>
+								<time class="date" datetime="2010-02-09">February 9th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">97%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2010-02-09">February 9th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Saint Vitus</a>
+								<span class="rating">90%</span>
+								<a class="author" href="user.htm">Byrgan</a>
+								<time class="date" datetime="2010-01-31">January 31st, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">V</a>
+								<span class="rating">93%</span>
+								<a class="author" href="user.htm">Acrobat</a>
+								<time class="date" datetime="2010-01-28">January 28th, 2010</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">V</a>
+								<span class="rating">89%</span>
+								<a class="author" href="user.htm">stonetotem</a>
+								<time class="date" datetime="2009-06-19">June 19th, 2009</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Heavier than Thou</a>
+								<span class="rating">95%</span>
+								<a class="author" href="user.htm">SoylentGreenIsPeople</a>
+								<time class="date" datetime="2009-05-15">May 15th, 2009</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Mournful Cries</a>
+								<span class="rating">87%</span>
+								<a class="author" href="user.htm">Scotar</a>
+								<time class="date" datetime="2009-03-23">March 23rd, 2009</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Saint Vitus</a>
+								<span class="rating">93%</span>
+								<a class="author" href="user.htm">iiix</a>
+								<time class="date" datetime="2009-01-06">January 6th, 2009</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">88%</span>
+								<a class="author" href="user.htm">marktheviktor</a>
+								<time class="date" datetime="2008-12-30">December 30th, 2008</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Heavier than Thou</a>
+								<span class="rating">85%</span>
+								<a class="author" href="user.htm">hells_unicorn</a>
+								<time class="date" datetime="2008-11-30">November 30th, 2008</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Hallow's Victim</a>
+								<span class="rating">97%</span>
+								<a class="author" href="user.htm">DeathForBlitzkrieg</a>
+								<time class="date" datetime="2008-04-15">April 15th, 2008</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Hallow's Victim</a>
+								<span class="rating">85%</span>
+								<a class="author" href="user.htm">Abominatrix</a>
+								<time class="date" datetime="2007-06-04">June 4th, 2007</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Mournful Cries</a>
+								<span class="rating">86%</span>
+								<a class="author" href="user.htm">erickg13</a>
+								<time class="date" datetime="2007-04-02">April 2nd, 2007</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">90%</span>
+								<a class="author" href="user.htm">brocashelm</a>
+								<time class="date" datetime="2006-06-14">June 14th, 2006</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Mournful Cries</a>
+								<span class="rating">85%</span>
+								<a class="author" href="user.htm">brocashelm</a>
+								<time class="date" datetime="2006-06-14">June 14th, 2006</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Die Healing</a>
+								<span class="rating">85%</span>
+								<a class="author" href="user.htm">brocashelm</a>
+								<time class="date" datetime="2006-04-20">April 20th, 2006</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Saint Vitus</a>
+								<span class="rating">85%</span>
+								<a class="author" href="user.htm">brocashelm</a>
+								<time class="date" datetime="2006-04-18">April 18th, 2006</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">87%</span>
+								<a class="author" href="user.htm">subjugator</a>
+								<time class="date" datetime="2006-04-16">April 16th, 2006</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Born Too Late</a>
+								<span class="rating">99%</span>
+								<a class="author" href="user.htm">Danthrax_Nasty</a>
+								<time class="date" datetime="2005-10-07">October 7th, 2005</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">The Walking Dead</a>
+								<span class="rating">85%</span>
+								<a class="author" href="user.htm">vomitpuslicker</a>
+								<time class="date" datetime="2005-04-29">April 29th, 2005</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Live</a>
+								<span class="rating">100%</span>
+								<a class="author" href="user.htm">Unsilent_Storms</a>
+								<time class="date" datetime="2004-11-17">November 17th, 2004</time>
+							</li>
+
+							<li class="review">
+								<a class="for" href="release.htm">Saint Vitus</a>
+								<span class="rating">92%</span>
+								<a class="author" href="user.htm">Abominatrix</a>
+								<time class="date" datetime="2004-02-18">February 18th, 2004</time>
+							</li>
+						</ul>
+
+					</div>
+				</section>
+				
+				
+				
+				<section id="similar-artists">
+					<h3>Similar Artists</h3>
+					
+					<div class="actions">
+						<a class="add sigil" href="#">Add</a>
+						<a class="edit sigil" href="band-votes-edit.htm">Edit</a>
+					</div>
+					
+					<div class="fold">
+						<ol>
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Black Sabbath</div>
+								<div class="country">United Kingdom</div>
+								<div class="genre">Heavy/Doom Metal</div>
+								<div class="score">199</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Pentagram</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">140</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">The Obsessed</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">70</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Cathedral</div>
+								<div class="country">United Kingdom</div>
+								<div class="genre">Doom/Stoner Metal</div>
+								<div class="score">62</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Witchfinder General</div>
+								<div class="country">United Kingdom</div>
+								<div class="genre">NWOBHM, Doom Metal</div>
+								<div class="score">60</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Count Raven</div>
+								<div class="country">Sweden</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">59</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Reverend Bizarre</div>
+								<div class="country">Finland</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">58</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Candlemass</div>
+								<div class="country">Sweden</div>
+								<div class="genre">Epic Doom Metal</div>
+								<div class="score">53</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Trouble</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom Metal, Psychedelic/Stoner Metal (later)</div>
+								<div class="score">47</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">The Gates of Slumber</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">47</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Lord Vicar</div>
+								<div class="country">Finland</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">36</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Iron Man</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">34</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Spirit Caravan</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom/Stoner Metal</div>
+								<div class="score">27</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Wino</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom/Stoner Metal</div>
+								<div class="score">23</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Orchid</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">23</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Blood Farmers</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">21</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Devil</div>
+								<div class="country">Norway</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">17</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Tyrant</div>
+								<div class="country">United States</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">17</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Children of Doom</div>
+								<div class="country">France</div>
+								<div class="genre">Doom Metal</div>
+								<div class="score">16</div>
+							</li>
+
+							<li>
+								<div class="vote">
+									<b role="button" class="i btn up">Vote up</b>
+									<b role="button" class="i btn down">Vote down</b>
+								</div>
+								
+								<div class="name">Church of Misery</div>
+								<div class="country">Japan</div>
+								<div class="genre">Doom/Stoner Metal</div>
+								<div class="score">14</div>
+							</li>
+						</ol>
+						
+						<a class="see-more" href="band-votes.htm">See more&hellip;</a>
+					</div>
+				</section>
+				
+				
+				<section id="related-links">
+					<h3>Related Links</h3>
+					
+					<div class="actions">
+						<a class="add sigil" href="#">Add</a>
+					</div>
+					
+					<div class="fold">
+						
+						<h4>Official</h4>
+						<div class="fold">
+							<ul>
+								<li><a href="http://saintvitus.bandcamp.com/" target="_blank">Bandcamp</a></li>
+								<li><a href="https://www.facebook.com/saintvitusofficial" target="_blank">Facebook</a></li>
+								<li><a href="http://www.saintvitusband.com/" target="_blank">Homepage</a></li>
+								<li><a href="http://myspace.com/stvitus" target="_blank">Myspace</a></li>
+								<li><a href="http://www.reverbnation.com/saintvitus" target="_blank">ReverbNation</a></li>
+								<li><a href="https://twitter.com/SAINTVITUSBAND" target="_blank">Twitter</a></li>
+							</ul>
+						</div>
+
+						<h4>Official merchandise</h4>
+						<div class="fold">
+							<ul>
+								<li><a href="http://www.illrockmerch.com/St-Vitus-s/766.htm" target="_blank">Ill Rock Merch</a></li>
+								<li><a href="http://itunes.apple.com/us/artist/saint-vitus/id117747948" target="_blank">iTunes</a></li>
+								<li><a href="http://www.rockabilia.com/browse/artists-groups/s/saint-vitus.html" target="_blank">Rockabilia</a></li>
+								<li><a href="http://e-shop.season-of-mist.com/en/bands/saint-vitus/1748" target="_blank">Season of Mist</a></li>
+								<li><a href="http://www.shopbenchmark.com/saintvitus/" target="_blank">Shopbenchmark</a></li>
+								<li><a href="http://www.value-merch.de/saintvitus" target="_blank">Value Merch</a></li>
+							</ul>
+						</div>
+						
+						<h4>Unofficial</h4>
+						<div class="fold">
+							<ul>
+								<li><a href="https://www.facebook.com/SaintVitusPL" target="_blank">Facebook (Polish)</a></li>
+								<li><a href="http://iconosquare.com/tag/saintvitus" target="_blank">Instagram</a></li>
+								<li><a href="http://myspace.com/saintvitusband" target="_blank">Myspace</a></li>
+							</ul>
+						</div>
+
+						<h4>Labels</h4>
+						<div class="fold">
+							<ul>
+								<li><a href="http://www.season-of-mist.com/bands/saint-vitus" target="_blank">Season of Mist</a></li>
+							</ul>
+						</div>
+
+						<h4>Tablatures</h4>
+						<div class="fold">
+							<ul>
+								<li><a href="http://www.911tabs.com/tabs/s/saint_vitus/" target="_blank">911Tabs</a></li>
+								<li><a href="http://www.ultimate-guitar.com/tabs/saint_vitus_tabs.htm" target="_blank">Ultimate-Guitar.com</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				
+				
+				<section id="buy-their-stuff">
+					<h3>Buy their stuff</h3>
+					<div class="fold">
+						
+						<ul>
+							<li><a href="#">Buy from No Remorse</a></li>
+							<li><a href="#">Buy from BlackScaped</a>
+							<li>
+								<a href="#">Search on Amazon.com</a>
+								<span class="toggle"><span>more</span>&hellip; &gt;&gt;</span>
+								<ul>
+									<li><a href="#">Amazon Canada</a></li>
+									<li><a href="#">Amazon France</a></li>
+									<li><a href="#">Amazon Germany</a></li>
+									<li><a href="#">Amazon UK</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Search on eBay</a>
+								<span class="toggle"><span>more</span>&hellip; &gt;&gt;</span>
+								<ul>
+									<li><a href="#">Search on Half.com</a></li>
+									<li><a href="#">eBay Canada</a></li>
+									<li><a href="#">eBay UK</a></li>
+									<li><a href="#">eBay France</a></li>
+									<li><a href="#">eBay Spain</a></li>
+									<li><a href="#">eBay Belgium</a></li>
+									<li><a href="#">eBay Netherlands</a></li>
+									<li><a href="#">eBay Italy</a></li>
+									<li><a href="#">eBay Australia</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Search on Gemm.com</a></li>
+						</ul>
+						
+					</div>
+				</section>
+				
+					
+				<section id="reports">
+					<h3>Reports</h3>
+					<div class="fold">
+						
+						<ul>
+							<li id="report-431772">
+								<a class="permalink" href="report.htm">View this report</a>
+								<div class="category">Lineup correction</div>
+								<div class="status">unassigned</div>
+								<dl class="reported">
+									<dt class="by">Reported by</dt>
+									<dd class="by"><a href="user.htm">Muhammadabbadabba</a></dd>
+									
+									<dt class="on">Date</dt>
+									<dd class="on"><time>2015-12-20 20:23:05</time>
+								</dl>
+							</li>
+							
+							<li id="report-">
+								<a class="permalink" href="report.htm">View this report</a>
+								<div class="category">General update / mistakes</div>
+								<div class="status">resolved</div>
+								<dl class="reported">
+									<dt class="by">Reported by</dt>
+									<dd class="by"><a href="user.htm">Yankis</a></dd>
+									
+									<dt class="on">Date</dt>
+									<dd class="on"><time>2015-02-23 15:50:10</time>
+								</dl>
+							</li>
+							
+							<li id="report-545092">
+								<a class="permalink" href="report.htm">View this report</a>
+								<div class="category">Should be removed</div>
+								<div class="status">unassigned</div>
+								<dl class="reported">
+									<dt class="by">Reported by</dt>
+									<dd class="by"><a href="user.htm">Muhammadabbadabba</a></dd>
+									
+									<dt class="on">Date</dt>
+									<dd class="on"><time>2015-12-20 20:23:05</time>
+								</dl>
+							</li>
+						</ul>
+						
+					</div>
+				</section>
+			</div>
 			
 			<footer id="audit-trail">
 				<dl class="added">
@@ -1362,11 +1371,11 @@
 				</dl>
 				
 				
-				<dl id="modified">
+				<dl class="modified">
 					<dt class="by">Modified by</dt>
 					<dd class="by"><a href="user.htm">Paw</a></dd>
 					
-					<dt class="on">Last modified on</dt>
+					<dt class="on">Last modified<span class="verbose"> on</span></dt>
 					<dd class="on"><time>2015-12-08 21:26:16</time></dd>
 				</dl>
 			</footer>
@@ -1374,7 +1383,7 @@
 		
 		
 		
-		<footer>
+		<footer id="page-actions">
 			<h4>Actions</h4>
 			<ul>
 				<li><a href="#">Clear cache</a></li>
@@ -1390,7 +1399,6 @@
 			</ul>
 		</footer>
 	</main>
-
 
 
 </body>

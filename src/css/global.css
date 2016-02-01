@@ -36,9 +36,8 @@ h1, h2, h3, h4, h5, h6{
 	margin: 0;
 }
 	h2{
-		font-size: 1.625em;
-		font-weight: normal;
-		font-variant: small-caps;
+		font: small-caps 1.625em Verdana;
+		margin: .55em 0;
 	}
 
 
@@ -106,34 +105,87 @@ button, .btn, a.btn{
 	2. PROJECT-SPECIFIC
 ===============================================================================*/
 
+/** Status colours */
+.active{     color: #690;     }
+.on-hold{    color: #ded24e;  }
+.inactive{   color: #ac0000;  }
+.draft{      color: #c0c0c0;  }
+.unknown{    color: #bd632c;  }
+.renamed{    color: #4c75e6;  }
+.disputed{   color: #b0f;     }
+
+
 /** Multiline text fields */
 .long-text{
 	white-space: pre-line;
 }
+
+/** Suppress line-breakage for activity period fields */
+.year-ranges > span{
+	white-space: nowrap;
+}
+
+
+
+
 
 
 /*=============================================================================*
 	3. COMPONENTS & WIDGETS
 ===============================================================================*/
 
-.control{
-	display: none;
+/** Collapsible accordion widgets */
+.accordion{
+	padding: 0;
+	margin:  0;
+	position: relative;
+	list-style: none;
 }
-	.control[type="checkbox"]:checked    + .fold,
-	.control[type="radio"]:not(:checked) + .fold{
-		max-height: 0 !important;
+	.accordion > *{
+		position: absolute;
+		overflow: hidden;
+		padding: 0;
+		margin:  0;
+		width:   100%;
 	}
+		.accordion > *,
+		.accordion.edge-visible,
+		.accordion .accordion{
+			transition: .3s ease all;
+		}
+		
+		/** Rule to disable transitions between gap corrections */
+		.snap.accordion > *,
+		.snap.accordion .accordion{
+			transition: none !important;
+		}
 
-label, .disclosure{
+		/** Headings */
+		.accordion > * > :first-child{
+			user-select: none;
+			cursor: pointer;
+			margin: 0;
+		}
+		
+		/** Collapsible content */
+		.accordion > * > :last-child{
+			overflow: hidden;
+			transition: .3s ease height, .3s step-start visibility;
+		}
+			.accordion > .closed > :last-child,
+			.accordion > .closed .accordion > .open > :last-child{
+				transition-timing-function: ease, step-end;
+				visibility: hidden;
+			}
+
+
+/** Prevent double-clicking from initiating a text selection */
+label,
+.accordion > * > :first-child{
 	cursor: pointer;
+	-webkit-user-select: none;
 	user-select: none;
 }
-
-.fold{
-	overflow: hidden;
-	transition: .3s ease max-height;
-}
-
 
 
 
