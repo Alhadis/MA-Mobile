@@ -510,69 +510,7 @@ main{
 
 		
 
-		/** Band pages */
-		#biography > .fold{
-			font-size: .95em;
-			line-height: 1.4;
-		}
-		
-		
-		/** Band line-ups */
-		#members > .fold{
-		}
-			/** Each different line-up list (Past, active, live, etc) */
-			#lineups ul{
-				list-style: none;
-				display: inline;
-				margin: 0;
-				padding: 0;
-			}
-				/** An individual member entered in this band's line-up */
-				.member{
-					border-top: 1px solid #3e0b0a;
-					margin: 1em .8em;
-					padding: 0 .5em;
-					font-size: .875em;
-					line-height: 1.75;
-				}
-					.member:first-child{
-						border-top: 0;
-					}
-						.member:first-child > .name{
-							margin-top: 0;
-						}
-					
-					/** Link to the artist's profile */
-					.member > .name{
-						font-weight: bold;
-						font-size: 1.143em;
-						margin-top: .5em;
-						display: inline-block;
-					}
-					
-					
-					/** Other bands this artist's played with */
-					.see-also{
-					}
-						.see-also ul,
-						.see-also li,
-						.member > .rip,
-						.see-also{
-							display: inline;
-						}
-							.see-also li:last-child::after{ content: none; }
-							.see-also li::after{            content: ", "; }
-			
-			
-			/** Ornament displayed at the bottom of the list */
-			#members > .fold::after{
-				content: "\e612";
-				font: 1em MAIcons;
-				display: block;
-				text-align: center;
-				color: #6d3f40;
-				padding: 1em 0 0;
-			}
+
 
 
 /*---------------------------------------------------------------------------*
