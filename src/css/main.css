@@ -466,7 +466,18 @@ main{
 							#page-sections .accordion > .open > h4::before{
 								border-width: 0 1em 1em;
 							}
-					
+			
+			/** Ornament displayed at the bottom of the fold's content */
+			#page-sections > :first-child ~ * > .fold::after{
+				content: "\e612";
+				font: 1em MAIcons;
+				display: block;
+				text-align: center;
+				color: #6d3f40;
+				padding: 1em 0 0;
+			}
+		
+		
 		
 		
 		/** Footer containing page metadata */
