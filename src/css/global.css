@@ -99,6 +99,23 @@ button, .btn, a.btn{
 	padding: .25em;
 	font-variant: small-caps;
 }
+	/** Icon-buttons */
+	.btn.i{
+		padding: 0;
+		color: #6d4c4c;
+	}
+		.btn.i::before{
+			font: 1.3em/0 MAIcons;
+			top: 50%;
+			left: 50%;
+			margin-left: -.5em;
+			text-align: left;
+			padding-top: 0;
+		}
+		.btn.view::before{
+			font-size: 1em;
+			margin-top: -.02em;
+		}
 
 
 /*=============================================================================*

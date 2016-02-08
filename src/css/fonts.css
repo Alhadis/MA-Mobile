@@ -26,6 +26,13 @@
 /** Actual icons */
 .i.nav::before          { content: "\2630"; }
 .i.search::before       { content: "\2315"; }
+.i.view::before         { content: "\1f50e" }
+.i.first::before        { content: "\2b70"; }
+.i.last::before         { content: "\2b72"; }
+.i.prev::before         { content: "\2b05"; }
+.i.next::before         { content: "\2b95"; }
+.i.up::before           { content: "\2b06"; }
+.i.down::before         { content: "\2b07"; }
 
 /** Ornamentation */
 .i.border1::before      { content: "\e603"; }
