@@ -210,10 +210,10 @@
 				</section>
 				
 				
-				<section id="discography" class="open">
+				<section id="discography">
 					<h3>Discography</h3>
 					
-					<div class="actions">
+					<div class="row-actions">
 						<a class="add sigil" href="release-add.htm">Add</a>
 					</div>
 					
@@ -424,7 +424,7 @@
 				<section id="members">
 					<h3>Members</h3>
 					
-					<div class="actions">
+					<div class="row-actions">
 						<a class="edit sigil" href="band-lineup.htm">Edit</a>
 					</div>
 					
@@ -1009,7 +1009,7 @@
 				<section id="similar-artists">
 					<h3>Similar Artists</h3>
 					
-					<div class="actions">
+					<div class="row-actions">
 						<a class="add sigil" href="#">Add</a>
 						<a class="edit sigil" href="band-votes-edit.htm">Edit</a>
 					</div>
@@ -1265,7 +1265,7 @@
 				<section id="related-links">
 					<h3>Related Links</h3>
 					
-					<div class="actions">
+					<div class="row-actions">
 						<a class="add sigil" href="#">Add</a>
 					</div>
 					
@@ -1361,51 +1361,113 @@
 				</section>
 				
 					
-				<section id="reports">
+				<section id="reports" class="open">
 					<h3>Reports</h3>
 					<div class="fold">
 						
-						<ul>
-							<li id="report-431772">
-								<a class="permalink" href="report.htm">View this report</a>
-								<div class="category">Lineup correction</div>
-								<div class="status">unassigned</div>
-								<dl class="reported">
-									<dt class="by">Reported by</dt>
-									<dd class="by"><a href="user.htm">Muhammadabbadabba</a></dd>
-									
-									<dt class="on">Date</dt>
-									<dd class="on"><time>2015-12-20 20:23:05</time>
-								</dl>
-							</li>
+						<div class="data-table" role="grid">
 							
-							<li id="report-">
-								<a class="permalink" href="report.htm">View this report</a>
-								<div class="category">General update / mistakes</div>
-								<div class="status">resolved</div>
-								<dl class="reported">
-									<dt class="by">Reported by</dt>
-									<dd class="by"><a href="user.htm">Yankis</a></dd>
-									
-									<dt class="on">Date</dt>
-									<dd class="on"><time>2015-02-23 15:50:10</time>
-								</dl>
-							</li>
-							
-							<li id="report-545092">
-								<a class="permalink" href="report.htm">View this report</a>
-								<div class="category">Should be removed</div>
-								<div class="status">unassigned</div>
-								<dl class="reported">
-									<dt class="by">Reported by</dt>
-									<dd class="by"><a href="user.htm">Muhammadabbadabba</a></dd>
-									
-									<dt class="on">Date</dt>
-									<dd class="on"><time>2015-12-20 20:23:05</time>
-								</dl>
-							</li>
-						</ul>
+							<div class="table-head">
+								<label id="sort-reports" class="filter-list">
+									<span>Sort by category (A-Z)</span>
+									<select>
+										<option value="1" data-label="Sort by category (A-Z)">Category: A-Z</option>
+										<option value="2" data-label="Sort by category (Z-A)">Category: Z-A</option>
+										<option value="3" data-label="Sort by status (A-Z)">Status: A-Z</option>
+										<option value="4" data-label="Sort by status (Z-A)">Status: Z-A</option>
+										<option value="5" data-label="Sort by reporter (A-Z)">Reporter: A-Z</option>
+										<option value="6" data-label="Sort by reporter (Z-A)">Reporter: Z-A</option>
+										<option value="7" data-label="Sort by date (Oldest)">Date: Oldest</option>
+										<option value="8" data-label="Sort by date (Newest)">Date: Newest</option>
+									</select>
+								</label>
+								
+								<div class="pagination">
+									<div class="page-position">Showing 1 to 3 of 3 entries</div>
+									<div class="page-nav">
+										<a href="#" class="i btn first">First page</a>
+										<a href="#" class="i btn prev">Previous page</a>
+										<span class="page-numbers">
+											<a href="#" class="btn active">1</a>
+											<a href="#" class="btn">2</a>
+											<a href="#" class="btn">3</a>
+										</span>
+										<a href="#" class="i btn next">Next page</a>
+										<a href="#" class="i btn last">Last page</a>
+									</div>
+								</div>
+							</div>
 						
+							
+							<ul class="rows">
+								<li id="report-431772" class="row">
+									<div class="row-actions">
+										<a class="permalink i btn view" href="report.htm">View this report</a>
+									</div>
+									<div class="row-body">
+										<div class="category">Lineup correction</div>
+										<div class="status">unassigned</div>
+										<dl class="reported">
+											<dt class="by">Reported by</dt>
+											<dd class="by"><a href="user.htm">Muhammadabbadabba</a></dd>
+											
+											<dt class="on">Date</dt>
+											<dd class="on"><time>2015-12-20 20:23:05</time>
+										</dl>
+									</div>
+								</li>
+								
+								<li id="report-511046" class="row">
+									<div class="row-actions">
+										<a class="permalink i btn view" href="report.htm">View this report</a>
+									</div>
+									<div class="row-body">
+										<div class="category">General update / mistakes</div>
+										<div class="status">resolved</div>
+										<dl class="reported">
+											<dt class="by">Reported by</dt>
+											<dd class="by"><a href="user.htm">Yankis</a></dd>
+											
+											<dt class="on">Date</dt>
+											<dd class="on"><time>2015-02-23 15:50:10</time>
+										</dl>
+									</div>
+								</li>
+								
+								<li id="report-545092" class="row">
+									<div class="row-actions">
+										<a class="permalink i btn view" href="report.htm">View this report</a>
+									</div>
+									<div class="row-body">
+										<div class="category">Should be removed</div>
+										<div class="status">unassigned</div>
+										<dl class="reported">
+											<dt class="by">Reported by</dt>
+											<dd class="by"><a href="user.htm">Muhammadabbadabba</a></dd>
+											
+											<dt class="on">Date</dt>
+											<dd class="on"><time>2015-12-20 20:23:05</time>
+										</dl>
+									</div>
+								</li>
+							</ul>
+							
+							<div class="pagination">
+								<div class="page-position">Showing 1 to 3 of 3 entries</div>
+								<div class="page-nav">
+									<a href="#" class="i btn first">First page</a>
+									<a href="#" class="i btn prev">Previous page</a>
+									<span class="page-numbers">
+										<a href="#" class="btn active">1</a>
+										<a href="#" class="btn">2</a>
+										<a href="#" class="btn">3</a>
+									</span>
+									<a href="#" class="i btn next">Next page</a>
+									<a href="#" class="i btn last">Last page</a>
+								</div>
+							</div>
+						</div>
+					
 					</div>
 				</section>
 			</div>

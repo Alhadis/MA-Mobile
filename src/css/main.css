@@ -384,7 +384,8 @@ main{
 
 		/** Togglable content sections: tabs on desktop, accordion for mobile */
 		#page-sections{
-			margin: 0 -1em;
+			margin: 0 -1em 1em;
+			border-bottom: 1px solid #461f0f;
 		}
 			/** Section titles */
 			#page-sections > section > h3{
@@ -422,9 +423,6 @@ main{
 				top:   0;
 				right: 0;
 			}
-				.actions > a{
-					padding: .65em;
-				}
 			
 			
 			/** Expandable/collapsible section content */
@@ -478,6 +476,90 @@ main{
 			}
 		
 		
+			/** Data tables */
+			.data-table{
+			}
+				.pagination{
+					color: #6d3f40;
+				}
+					/** "Showing 1 to # of # entries" */
+					.page-position{
+						font-size: .97222em;
+					}
+					
+					/** Buttons for viewing more results */
+					.page-nav{
+						display: inline-block;
+						margin: .5em 0;
+					}
+						.page-numbers > a{
+							border-radius: .4em;
+							display: inline-block;
+							vertical-align: top;
+							min-width: 1.6em;
+							height:    1.6em;
+							text-align: center;
+							color: #c2b8af;
+							font: 1.25em/.9 Verdana, sans-serif;
+						}
+							.page-numbers > a:hover{
+								text-decoration: none;
+							}
+				
+				/** Rows of data */
+				.rows{
+					list-style: none;
+					border-top: 1px solid;
+					border-color: #3e0b0a;
+					margin: 1em -1em;
+					padding: 0;
+				}
+					.row{
+						position: relative;
+						border-bottom: 1px solid;
+						border-bottom-color: inherit;
+						padding: .5em 1em;
+					}
+						/** Buttons to do shit with the row's content */
+						.row-actions{
+							float: left;
+							width: 3em;
+							padding-top: .25em;
+						}
+							.row-actions > a{
+								margin-bottom: .35em;
+							}
+						
+						/** Actual contents of the row */
+						.row-body{
+							float: right;
+							width: 100%;
+							margin-left: -3em;
+							padding-left: 3em;
+						}
+							/** Report entry */
+							.reported{
+								margin-bottom: 0;
+							}
+								.reported > dt{
+									font-family: inherit;
+									color: inherit;
+								}
+								.reported > dd{
+									margin: 0;
+									display: inline;
+								}
+									.reported > dd::after{
+										content: "";
+										display: block;
+									}
+						
+						/** Clearfix */
+						.row::after{
+							content: "";
+							display: block;
+							clear: both;
+						}
 		
 		
 		/** Footer containing page metadata */

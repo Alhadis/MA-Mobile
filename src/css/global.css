@@ -273,15 +273,19 @@ label,
 	display: block;
 	font-size: 16px;
 	font-size: 1rem;
-	padding: .25em 2.25em;
+	padding: 0 2.25em;
 	position: relative;
 	max-width: 16em;
 	margin: .5em auto 1em;
 	text-align: center;
-	text-transform: lowercase;
 	white-space: nowrap;
 	color: #c2b8af;
 }
+	/** Lowercase first letter of selected option. Just because. */
+	.filter-list > span{               display: block;padding: .2em 0 .25em;}
+	.filter-list > span::first-letter{ text-transform: lowercase; }
+	
+	
 	/** Stretch dropdown to cover the styled list */
 	.filter-list > select{
 		position: absolute;
@@ -299,7 +303,7 @@ label,
 	.filter-list::after{
 		content: "\e609";
 		position: absolute;
-		font: 2.8em/0 MAIcons;
+		font: 2.6em/0 MAIcons;
 		margin: 0 -.6em;
 		color: #6d4c4c;
 		left: 0;
