@@ -200,6 +200,55 @@ button, .btn, a.btn{
 	}
 
 
+/** Ornamented links */
+.sigil,
+.sigil[href]{
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	text-transform: lowercase;
+	font: .90278em Tahoma;
+	position: relative;
+	padding: 1em .6em;
+	color: #c2b8af;
+}
+	.sigil:hover{
+		color: #6d3f40;
+		text-decoration: none;
+	}
+	.sigil::before,
+	.sigil::after{
+		position: absolute;
+		font-family: MAIcons;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	
+	
+	/** "Add" button */
+	.add.sigil::before,
+	.add.sigil::after{
+		left: 50%;
+		margin: .25em 0 .25em -1.5em;
+		font-size: .7em;
+	}
+		.add.sigil::before{  content: "\e60e"; top:    0; }
+		.add.sigil::after{   content: "\e60d"; bottom: 0; }
+	
+	
+	/** "Edit" button */
+	.edit.sigil::before,
+	.edit.sigil::after{
+		left: 50%;
+		margin: .45em 0 .25em -1.7em;
+		content: "\e611";
+		font-size: .5em;
+	}
+		.edit.sigil::before{ top: 0;    }
+		.edit.sigil::after{  bottom: 0; }
+
+
+
 /*=============================================================================*
 	3. COMPONENTS & WIDGETS
 ===============================================================================*/
