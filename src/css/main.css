@@ -629,31 +629,10 @@ main{
 						margin-top: -2em;
 					}
 			
-			/** List items */
-			#page-actions > ul{
-				list-style: none;
-				padding: 0;
+			/** Link lists */
+			#page-actions > .crowned{
 				margin: .25em 0 1.25em;
-				position: relative;
 			}
-				/** Ornament */
-				#page-actions > ul::before{
-					content: "\e613";
-					margin: -.2em .13em 0 0;
-					font: 6em MAIcons;
-					position: absolute;
-					right: 100%;
-					top: 0;
-					-webkit-font-smoothing: antialiased;
-					-moz-osx-font-smoothing: grayscale;
-				}
-				
-				#page-actions a{
-					padding: .15em 0;
-					display: inline-block;
-				}
-
-		
 
 
 

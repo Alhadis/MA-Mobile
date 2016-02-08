@@ -104,6 +104,59 @@
 					.see-also li::after{            content: ", "; }
 
 
+/** Affiliate sites */
+.affiliates{
+	padding: 0;
+	margin: -1em -1em 0;
+	list-style: none;
+	border-bottom: 1px solid #3e0b0a;
+}
+	.affiliates > li{
+		position: relative;
+	}
+		.affiliates > li > a{
+			display: block;
+			padding: .6em;
+			border-top: 1px solid #3e0b0a;
+		}
+			.affiliates > :first-child > a{
+				border-top: 0;
+			}
+		
+		/** Toggle the expansion of Amazon/eBay links */
+		.affiliates .toggle{
+			position: absolute;
+			cursor: pointer;
+			padding: .65em;
+			right: 1.5em;
+			top:   0;
+		}
+			/** Trailing double angle-bracket */
+			.affiliates .toggle::after{
+				content: ">>";
+				color: #a2787a;
+				letter-spacing: -.15em;
+				padding-left: .5em;
+			}
+		
+			/** Darken text when tapped */
+			.affiliates .toggle:hover,
+			.affiliates .toggle:hover::after{
+				color: #6d3f40;
+			}
+		
+		
+		
+		.affiliates .crowned{
+			padding-left: 3.5em;
+			padding-bottom: 1em;
+		}
+			.affiliates .crowned::before{
+				margin-top: .08em;
+				right: auto;
+				left: .15em;
+			}
+
 
 
 /*---------------------------------------------------------------------------*

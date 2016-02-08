@@ -16,6 +16,8 @@
 		touchEnabled:   "ontouchstart" in document.documentElement
 	};
 	
+	/** Event-type to listen for when pressing something interactive */
+	var pressEvent = is.touchEnabled ? "touchend" : "click";
 	
 	
 	/**
@@ -46,7 +48,7 @@
 				noKeys: true,
 				useBorders: !$(this).hasClass("nb")
 			});
-		})
+		});
 	});
 	
 	

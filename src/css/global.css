@@ -200,7 +200,7 @@ button, .btn, a.btn{
 	}
 
 
-/** Ornamented links */
+/** Ornamented lists (usually of links) */
 .sigil,
 .sigil[href]{
 	display: inline-block;
@@ -246,6 +246,31 @@ button, .btn, a.btn{
 	}
 		.edit.sigil::before{ top: 0;    }
 		.edit.sigil::after{  bottom: 0; }
+
+
+
+/** Ornamented list */
+.crowned{
+	list-style: none;
+	padding: 0;
+	position: relative;
+}
+	/** Ornament */
+	.crowned::before{
+		content: "\e613";
+		margin: -.2em .13em 0 0;
+		font: 6em MAIcons;
+		position: absolute;
+		right: 100%;
+		top: 0;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	
+	.crowned > li > a{
+		padding: .15em 0;
+		display: inline-block;
+	}
 
 
 
