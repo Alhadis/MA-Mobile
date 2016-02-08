@@ -281,9 +281,15 @@ label,
 	white-space: nowrap;
 	color: #c2b8af;
 }
-	/** Lowercase first letter of selected option. Just because. */
-	.filter-list > span{               display: block;padding: .2em 0 .25em;}
-	.filter-list > span::first-letter{ text-transform: lowercase; }
+	/** Label displaying the currently-selected option */
+	.filter-list > span{
+		display: block;
+		padding: .2em 0 .25em;
+	}
+		/** Lowercase first letter of selected option. Just because. */
+		.filter-list > span::first-letter{
+			text-transform: lowercase;
+		}
 	
 	
 	/** Stretch dropdown to cover the styled list */
