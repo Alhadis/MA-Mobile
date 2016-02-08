@@ -126,8 +126,61 @@ button, .btn, a.btn{
 }
 
 
+/** Ornamental sceptre, stretches horizontally */
+.sceptre,
+.sceptres > s{
+	position: relative;
+	font-size: 1.459em;
+	padding: 0 3em 0 .8em;
+	height: 1em;
+	background: repeat-x url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iOXB4IiBoZWlnaHQ9IjIycHgiIHZpZXdCb3g9IjAgMCA5IDIyIj48cmVjdCBmaWxsPSIjNmQzZjQwIiB5PSIxMC4xMyIgd2lkdGg9IjkiIGhlaWdodD0iMS43MiIvPjwvc3ZnPgo=");
+	background-size: auto 100%;
+	background-clip: content-box;
+	transform-origin: 50% 50%;
+}
+	.sceptres > s + s,
+	.sceptre + .sceptre{
+		transform: scaleX(-1);
+	}
+	
+	/** Sceptre caps */
+	.sceptres > s::before,
+	.sceptres > s::after,
+	.sceptre::before,
+	.sceptre::after{
+		content: "";
+		position: absolute;
+		height: 100%;
+		background: no-repeat url("../img/sceptre.svg");
+		background-size: auto 100%;
+	}
+		/** Tiny bit */
+		.sceptre::before,
+		.sceptres > s::before{
+			background-position: 100% 0;
+			width: .9em;
+			left: 0;
+		}
+		
+		/** Bigger bit that looks like a pissed-off face tipped sideways */
+		.sceptre::after,
+		.sceptres > s::after{
+			width: 3.1em;
+			right: 0;
+		}
 
 
+/** Container for a pair of mirrored sceptres, used as a divider */
+.sceptres{
+	white-space: nowrap;
+	margin: 0 -.5em;
+}
+	.sceptres > s{
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+		text-decoration: none;
+	}
 
 
 /*=============================================================================*
@@ -144,38 +197,62 @@ button, .btn, a.btn{
 	.accordion > *{
 		position: absolute;
 		overflow: hidden;
+		width:   100%;
 		padding: 0;
 		margin:  0;
-		width:   100%;
 	}
 		.accordion > *,
 		.accordion.edge-visible,
 		.accordion .accordion{
-			transition: .3s ease all;
+			-webkit-transition: .3s ease all;
+			-moz-transition:    .3s ease all;
+			-o-transition:      .3s ease all;
+			transition:         .3s ease all;
+		}
+		
+		/** Transform-related */
+		.accordion,
+		.accordion > *{
+			will-change: height, transform;
+			-webkit-perspective: 90em;
+			-moz-perspective:    90em;
+			perspective:         90em;
+			
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility:    hidden;
+			backface-visibility:         hidden;
+			
+			-webkit-transform:  translate3d(0,0,0);
+			-moz-transform:     translate3d(0,0,0);
+			-ms-transform:      translateY(0);
+			-o-transform:       translate3d(0,0,0);
+			transform:          translate3d(0,0,0);
 		}
 		
 		/** Rule to disable transitions between gap corrections */
 		.snap.accordion > *,
 		.snap.accordion .accordion{
-			transition: none !important;
+			-webkit-transition: none !important;
+			-moz-transition:    none !important;
+			-o-transition:      none !important;
+			transition:         none !important;
 		}
 
 		/** Headings */
 		.accordion > * > :first-child{
-			user-select: none;
-			cursor: pointer;
 			margin: 0;
 		}
 		
 		/** Collapsible content */
 		.accordion > * > :last-child{
 			overflow: hidden;
-			transition: .3s ease height, .3s step-start visibility;
+			transition: .3s step-start visibility, .3s ease height, .3s ease opacity;
 		}
 			.accordion > .closed > :last-child,
 			.accordion > .closed .accordion > .open > :last-child{
-				transition-timing-function: ease, step-end;
+				transition-timing-function: step-end, ease, ease;
 				visibility: hidden;
+				opacity: 0;
 			}
 
 

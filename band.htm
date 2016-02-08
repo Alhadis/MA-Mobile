@@ -218,153 +218,198 @@
 					</div>
 					
 					<div class="fold">
+						<label id="filter-releases">
+							Showing <span>other releases</span>
+							<select>
+								<option value=""  data-label="all releases">All</option>
+								<option value="1" data-label="main releases">Main</option>
+								<option value="2" data-label="live releases">Lives</option>
+								<option value="3" data-label="demo releases">Demos</option>
+								<option value="4" data-label="other releases">Misc</option>
+							</select>
+						</label>
 						
-						<label for="filter-releases">Showing <b>all</b> releases</label>
-						<select id="filter-releases">
-							<option value="">All</option>
-							<option value="1">Main</option>
-							<option value="2">Lives</option>
-							<option value="3">Demos</option>
-							<option value="4">Misc</option>
-						</select>
+						<div class="sceptres"><s></s><s></s></div>
 						
 						<ul class="all releases"><!-- First class controls the type of releases shown -->
 							<li class="demo release">
 								<a class="title" href="release.htm">1983 Demo</a>
-								<span class="type">Demo</span>
-								<time class="date" datetime="1983">1983</time>
+								<div class="release-info">
+									<span class="type">Demo</span>
+									<time class="date" datetime="1983">1983</time>
+								</div>
 							</li>
 
 							<li class="full-length release">
 								<a class="title" href="release.htm">Saint Vitus</a>
-								<span class="type">Full-length</span>
-								<time class="date" datetime="1984-02">1984</time>
-								<a class="reviews" href="release-reviews.htm">7 reviews (91% average)</a>
+								<div class="release-info">
+									<span class="type">Full-length</span>
+									<time class="date" datetime="1984-02">1984</time>
+									<a class="reviews" href="release-reviews.htm">7 reviews (91% average)</a>
+								</div>
 							</li>
 
 							<li class="demo release">
 								<a class="title" href="release.htm">Hallow's Victim</a>
-								<span class="type">Full-length</span>
-								<time class="date" datetime="1985-08">1985</time>
-								<a class="reviews" href="release-reviews.htm">5 reviews (86% average)</a>
+								<div class="release-info">
+									<span class="type">Full-length</span>
+									<time class="date" datetime="1985-08">1985</time>
+									<a class="reviews" href="release-reviews.htm">5 reviews (86% average)</a>
+								</div>
 							</li>
 
 							<li class="ep release">
 								<a class="title" href="release.htm">The Walking Dead</a>
-								<span class="type">EP</span>
-								<time class="date" datetime="1985-10">1985</time>
-								<a class="reviews" href="release-reviews.htm">2 reviews (81% average)</a>
+								<div class="release-info">
+									<span class="type">EP</span>
+									<time class="date" datetime="1985-10">1985</time>
+									<a class="reviews" href="release-reviews.htm">2 reviews (81% average)</a>
+								</div>
 							</li>
 
 							<li class="split release">
 								<a class="title" href="release.htm">Program: Annihilator - A Soundtrack for Destruction</a>
-								<span class="type">Split</span>
-								<time class="date">1986</time>
+								<div class="release-info">
+									<span class="type">Split</span>
+									<time class="date">1986</time>
+								</div>
 							</li>
 
 							<li class="full-length release">
 								<a class="title" href="release.htm">Born Too Late</a>
-								<span class="type">Full-length</span>
-								<time class="date" datetime="1986-10">1986</time>
-								<a class="reviews" href="release-reviews.htm">10 reviews (94% average)</a>
+								<div class="release-info">
+									<span class="type">Full-length</span>
+									<time class="date" datetime="1986-10">1986</time>
+									<a class="reviews" href="release-reviews.htm">10 reviews (94% average)</a>
+								</div>
 							</li>
 
 							<li class="ep release">
 								<a class="title" href="release.htm">Thirsty and Miserable</a>
-								<span class="type">EP</span>
-								<time class="date" datetime="1987-09-27">1987</time>
-								<a class="reviews" href="release-reviews.htm">2 reviews (83% average)</a>
+								<div class="release-info">
+									<span class="type">EP</span>
+									<time class="date" datetime="1987-09-27">1987</time>
+									<a class="reviews" href="release-reviews.htm">2 reviews (83% average)</a>
+								</div>
 							</li>
 
 							<li class="full-length release">
 								<a class="title" href="release.htm">Mournful Cries</a>
-								<span class="type">Full-length</span>
-								<time class="date" datetime="1988-08-22">1988</time>
-								<a class="reviews" href="release-reviews.htm">6 reviews (92% average)</a>
+								<div class="release-info">
+									<span class="type">Full-length</span>
+									<time class="date" datetime="1988-08-22">1988</time>
+									<a class="reviews" href="release-reviews.htm">6 reviews (92% average)</a>
+								</div>
 							</li>
 
 							<li class="full-length release">
 								<a class="title" href="release.htm">V</a>
-								<span class="type">Full-length</span>
-								<time class="date" datetime="1990">1990</time>
-								<a class="reviews" href="release-reviews.htm">5 reviews (93% average)</a>
+								<div class="release-info">
+									<span class="type">Full-length</span>
+									<time class="date" datetime="1990">1990</time>
+									<a class="reviews" href="release-reviews.htm">5 reviews (93% average)</a>
+								</div>
 							</li>
 
 							<li class="live release">
 								<a class="title" href="release.htm">Live</a>
-								<span class="type">Live album</span>
-								<time class="date" datetime="1990-09">1990</time>
-								<a class="reviews" href="release-reviews.htm">2 reviews (92% average)</a>
+								<div class="release-info">
+									<span class="type">Live album</span>
+									<time class="date" datetime="1990-09">1990</time>
+									<a class="reviews" href="release-reviews.htm">2 reviews (92% average)</a>
+								</div>
 							</li>
 
 							<li class="comp release">
 								<a class="title" href="release.htm">Heavier than Thou</a>
-								<span class="type">Compilation</span>
-								<time class="date" datetime="1991-07-01">1991</time>
-								<a class="reviews" href="release-reviews.htm">3 reviews (89% average)</a>
+								<div class="release-info">
+									<span class="type">Compilation</span>
+									<time class="date" datetime="1991-07-01">1991</time>
+									<a class="reviews" href="release-reviews.htm">3 reviews (89% average)</a>
+								</div>
 							</li>
 
 							<li class="full-length release">
 								<a class="title" href="release.htm">C.O.D.</a>
-								<span class="type">Full-length</span>
-								<time class="date" datetime="1992-09">1992</time>
-								<a class="reviews" href="release-reviews.htm">4 reviews (77% average)</a>
+								<div class="release-info">
+									<span class="type">Full-length</span>
+									<time class="date" datetime="1992-09">1992</time>
+									<a class="reviews" href="release-reviews.htm">4 reviews (77% average)</a>
+								</div>
 							</li>
 
 							<li class="full-length release">
 								<a class="title" href="release.htm">Die Healing</a>
-								<span class="type">Full-length</span>
-								<time class="date" datetime="1995-05-09">1995</time>
-								<a class="reviews" href="release-reviews.htm">5 reviews (92% average)</a>
+								<div class="release-info">
+									<span class="type">Full-length</span>
+									<time class="date" datetime="1995-05-09">1995</time>
+									<a class="reviews" href="release-reviews.htm">5 reviews (92% average)</a>
+								</div>
 							</li>
 
 							<li class="video release">
 								<a class="title" href="release.htm">Reunion 2003 - Live in Chicago</a>
-								<span class="type">Video</span>
-								<time class="date" datetime="2007">2007</time>
+								<div class="release-info">
+									<span class="type">Video</span>
+									<time class="date" datetime="2007">2007</time>
+								</div>
 							</li>
 
 							<li class="comp release">
 								<a class="title" href="release.htm">The Walking Dead / Hallow's Victim</a>
-								<span class="type">Compilation</span>
-								<time class="date" datetime="2010-09-28">2010</time>
+								<div class="release-info">
+									<span class="type">Compilation</span>
+									<time class="date" datetime="2010-09-28">2010</time>
+								</div>
 							</li>
 
 							<li class="single release">
 								<a class="title" href="release.htm">Saint Vitus / Born Too Late</a>
-								<span class="type">Single</span>
-								<time class="date" datetime="2011-01">2011</time>
+								<div class="release-info">
+									<span class="type">Single</span>
+									<time class="date" datetime="2011-01">2011</time>
+								</div>
 							</li>
 
 							<li class="single release">
 								<a class="title" href="release.htm">Blessed Night</a>
-								<span class="type">Single</span>
-								<time class="date" datetime="2012-03-23">2012</time>
+								<div class="release-info">
+									<span class="type">Single</span>
+									<time class="date" datetime="2012-03-23">2012</time>
+								</div>
 							</li>
 
 							<li class="full-length release">
 								<a class="title" href="release.htm">Lillie: F-65</a>
-								<span class="type">Full-length</span>
-								<time class="date" datetime="2012-04-27">2012</time>
-								<a class="reviews" href="release-reviews.htm">6 reviews (85% average)</a>
+								<div class="release-info">
+									<span class="type">Full-length</span>
+									<time class="date" datetime="2012-04-27">2012</time>
+									<a class="reviews" href="release-reviews.htm">6 reviews (85% average)</a>
+								</div>
 							</li>
 
 							<li class="ep release">
 								<a class="title" href="release.htm">Live</a>
-								<span class="type">EP</span>
-								<time class="date" datetime="2012-09-13">2012</time>
+								<div class="release-info">
+									<span class="type">EP</span>
+									<time class="date" datetime="2012-09-13">2012</time>
+								</div>
 							</li>
 
 							<li class="live release">
 								<a class="title" href="release.htm">Marbles in the Moshpit</a>
-								<span class="type">Live album</span>
-								<time class="date" datetime="2012-12-26">2012</time>
+								<div class="release-info">
+									<span class="type">Live album</span>
+									<time class="date" datetime="2012-12-26">2012</time>
+								</div>
 							</li>
 
 							<li class="split release">
 								<a class="title" href="release.htm">Label Showcase - Season of Mist</a>
-								<span class="type">Split</span>
-								<time class="date" datetime="2013-02-28">2013</time>
+								<div class="release-info">
+									<span class="type">Split</span>
+									<time class="date" datetime="2013-02-28">2013</time>
+								</div>
 							</li>
 						</ul>
 						
@@ -381,7 +426,7 @@
 					</div>
 					
 					<div class="fold">
-						<div id="lineups" class="accordion">
+						<div id="lineups" class="accordion nb">
 							
 							<section id="current-members" class="open">
 								<h4>Current</h4>

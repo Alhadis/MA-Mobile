@@ -1,8 +1,111 @@
+#basic-info,
+.zoomable{
+	display: none !important;
+}
+
+
 /** Band pages */
 #biography > .fold{
 	font-size: .95em;
 	line-height: 1.4;
 }
+
+/** Discography */
+#discography > .fold{
+}
+	/** Release type filter-list */
+	#filter-releases{
+		border: 0 solid #6d4c4c;
+		border-width: 1px 0;
+		display: block;
+		font-size: 16px;
+		font-size: 1rem;
+		padding: .25em 2.25em;
+		position: relative;
+		max-width: 16em;
+		margin: .5em auto 1em;
+		text-align: center;
+		text-transform: lowercase;
+		white-space: nowrap;
+		color: #c2b8af;
+	}
+		/** Stretch dropdown to cover the styled filter-list */
+		#filter-releases > select{
+			position: absolute;
+			cursor: pointer;
+			top:     0;
+			left:    0;
+			width:   100%;
+			height:  100%;
+			z-index: 2;
+			opacity: 0;
+		}
+		
+		/** Ornamental caps situated at each end */
+		#filter-releases::before,
+		#filter-releases::after{
+			content: "\e609";
+			position: absolute;
+			font: 2.8em/0 MAIcons;
+			margin: 0 -.6em;
+			color: #6d4c4c;
+			left: 0;
+			top:  50%;
+			pointer-events: none;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+			/** Twist the second cap to face the right */
+			#filter-releases::after{
+				content: "\e60a";
+				left: auto;
+				right: 0;
+			}
+		
+
+	
+	.releases{
+		list-style: none;
+		padding: 0;
+		margin: -1.3em 0 0;
+		text-align: left;
+	}
+		.release{
+			border-top: 1px solid #693d3e;
+			margin: .5em -.4em;
+			padding: 0 .4em;
+		}
+			.release:first-child{
+				border-top: 0;
+			}
+			
+			/** Top row: Release's name */
+			.release > .title{
+				font-weight: bold;
+				line-height: 1.3;
+				display: inline-block;
+				padding: .7em 0 0;
+			}
+			
+			/** Bottom row: All the other shit */
+			.release-info{
+				position: relative;
+				font-size: .9em;
+			}
+				.release-info > .date{
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+				.release-info > .type{
+					padding-left: 4.5em;
+				}
+				.release-info > .reviews{
+					position: absolute;
+					right: 0;
+				}
+
+		
 
 
 /** Band line-ups */
@@ -61,3 +164,19 @@
 		color: #6d3f40;
 		padding: 1em 0 0;
 	}
+
+
+
+/*---------------------------------------------------------------------------*
+	1a: < 352 (SMALL SMARTPHONES)
+-----------------------------------------------------------------------------*/
+@media (max-width: 22em){
+	#filter-releases{
+		padding-left:  1.5em;
+		padding-right: 1.5em;
+	}
+	.release-info > .reviews{
+		position: static;
+		display: block;
+	}
+}

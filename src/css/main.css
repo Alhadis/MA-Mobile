@@ -463,9 +463,9 @@ main{
 							border-style: solid;
 							border-color: #633 transparent;
 						}
-						#page-sections .accordion > .open > h4::before{
-							border-width: 0 1em 1em;
-						}
+							#page-sections .accordion > .open > h4::before{
+								border-width: 0 1em 1em;
+							}
 					
 		
 		

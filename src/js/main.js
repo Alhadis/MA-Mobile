@@ -35,13 +35,16 @@
 	}
 	
 	
+	
 	/** Fired from the page's onReady handler */
 	$(document).ready(function(){
+		var pageSections = $("#page-sections");
+		
 		$(".accordion").each(function(){
 			new Accordion(this, {
 				noAria: true,
 				noKeys: true,
-				useBorders: true
+				useBorders: !$(this).hasClass("nb")
 			});
 		})
 	});
