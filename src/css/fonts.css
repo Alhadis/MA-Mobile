@@ -24,24 +24,24 @@
 }
 
 /** Actual icons */
-.i.nav::before			{	content: "\2630";	}
-.i.search::before		{	content: "\2315";	}
+.i.nav::before          { content: "\2630"; }
+.i.search::before       { content: "\2315"; }
 
 /** Ornamentation */
-.i.border1::before		{	content: "\e603";	}
-.i.border2::before		{	content: "\e604";	}
-.i.dagger1::before		{	content: "\e605";	}
-.i.dagger2::before		{	content: "\e606";	}
-.i.fleuron1-l::before	{	content: "\e607";	}
-.i.fleuron1-r::before	{	content: "\e608";	}
-.i.fleuron2-l::before	{	content: "\e609";	}
-.i.fleuron2-r::before	{	content: "\e60a";	}
-.i.fleuron2-t::before	{	content: "\e60b";	}
-.i.fleuron2-b::before	{	content: "\e60c";	}
-.i.fleuron3-b::before	{	content: "\e60d";	}
-.i.fleuron3-t::before	{	content: "\e60e";	}
-.i.fleuron4::before		{	content: "\e60f";	}
-.i.fleuron5::before		{	content: "\e610";	}
-.i.fleuron6::before		{	content: "\e611";	}
-.i.fleuron7::before		{	content: "\e612";	}
-.i.fleuron8::before		{	content: "\e613";	}
+.i.border1::before      { content: "\e603"; }
+.i.border2::before      { content: "\e604"; }
+.i.dagger1::before      { content: "\e605"; }
+.i.dagger2::before      { content: "\e606"; }
+.i.fleuron1-l::before   { content: "\e607"; }
+.i.fleuron1-r::before   { content: "\e608"; }
+.i.fleuron2-l::before   { content: "\e609"; }
+.i.fleuron2-r::before   { content: "\e60a"; }
+.i.fleuron2-t::before   { content: "\e60b"; }
+.i.fleuron2-b::before   { content: "\e60c"; }
+.i.fleuron3-b::before   { content: "\e60d"; }
+.i.fleuron3-t::before   { content: "\e60e"; }
+.i.fleuron4::before     { content: "\e60f"; }
+.i.fleuron5::before     { content: "\e610"; }
+.i.fleuron6::before     { content: "\e611"; }
+.i.fleuron7::before     { content: "\e612"; }
+.i.fleuron8::before     { content: "\e613"; }

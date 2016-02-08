@@ -34,10 +34,10 @@ html{
 #navbar{
 	position: fixed;
 	z-index: 5;
-	top:	0;
-	left:	0;
-	right:	0;
-	height:	3.125em;
+	top:    0;
+	left:   0;
+	right:  0;
+	height: 3.125em;
 	padding: 0 3.2em;
 	text-align: center;
 	background: #271010 url("../img/grain.png");
@@ -81,19 +81,19 @@ html{
 	/** Actual search <form> */
 	#search-form{
 		position: absolute;
-		top:	0;
-		right:	0;
-		height:	100%;
-		width:	100%;
+		top:    0;
+		right:  0;
+		height: 100%;
+		width:  100%;
 	}
 		/** Faux background to hide the input field when it's sliding closed */
 		#search-form::before{
 			content: "";
 			background: url("../img/grain.png");
 			position: absolute;
-			top:	0;
-			right:	0;
-			height:	100%;
+			top:    0;
+			right:  0;
+			height: 100%;
 			width: 1.7em;
 			z-index: 3;
 		}
@@ -102,14 +102,14 @@ html{
 		#search-wrap{
 			position: absolute;
 			background: #000;
-			border:	0 solid #917979;
+			border: 0 solid #917979;
 			border-width: 1px 0;
 			border-radius: .25em;
 			padding: .5em;
-			top:	.35em;
-			right:	1.75em;
-			height:	2.5em;
-			width:	90%;
+			top:    .35em;
+			right:  1.75em;
+			height: 2.5em;
+			width:  90%;
 			width: calc(100% - 6em);
 			z-index: 1;
 			opacity: 0;
@@ -136,10 +136,10 @@ html{
 				background: no-repeat url("../img/caps.png");
 				background-size: auto 100%;
 				font-size: 3em;
-				width:	.92em;
-				height:	1em;
-				top:	50%;
-				right:	100%;
+				width:  .92em;
+				height: 1em;
+				top:    50%;
+				right:  100%;
 				z-index: 2;
 				margin: -.5em -.33em 0;
 				position: absolute;
@@ -175,11 +175,11 @@ html{
 			#search-query{
 				background: none;
 				position: absolute;
-				border:	0;
-				top:	0;
-				left:	0;
-				width:	100%;
-				height:	100%;
+				border: 0;
+				top:    0;
+				left:   0;
+				width:  100%;
+				height: 100%;
 				display: block;
 				padding: 0 1.1em;
 			}
@@ -199,9 +199,9 @@ html{
 			position: absolute;
 			white-space: nowrap;
 			font-size: .875em;
-			top:	100%;
-			width:	100vw;
-			right:	0;
+			top:    100%;
+			width:  100vw;
+			right:  0;
 			padding: 1em;
 			text-align: left;
 			background: url("../img/waves.png");
@@ -220,10 +220,10 @@ html{
 			#search-options::after{
 				content: "";
 				position: absolute;
-				top:	0;
-				left:	0;
-				right:	0;
-				bottom:	0;
+				top:    0;
+				left:   0;
+				right:  0;
+				bottom: 0;
 				z-index: 2;
 			}
 				.open-search #search-options::after{
@@ -252,17 +252,17 @@ html{
 					cursor: pointer;
 					opacity: 0;
 					z-index: 2;
-					top:	0;
-					left:	0;
-					right:	0;
-					bottom:	0;
+					top:    0;
+					left:   0;
+					right:  0;
+					bottom: 0;
 				}
 			
 			/** Close button */
 			#search-close{
 				position: absolute;
-				top:	.35em;
-				right:	.5em;
+				top:    .35em;
+				right:  .5em;
 				cursor: pointer;
 				line-height: 0;
 			}
@@ -328,10 +328,10 @@ main{
 	padding-top: 50px;
 	padding-top: 3.125rem;
 	position: fixed;
-	top:	0;
-	left:	0;
-	right:	0;
-	height:	100vh;
+	top:    0;
+	left:   0;
+	right:  0;
+	height: 100vh;
 	overflow: auto;
 	font-size: .9em;
 	line-height: 1.6;
@@ -452,7 +452,7 @@ main{
 						#page-sections .accordion > section > h4::before{
 							position: absolute;
 							content: "";
-							top:	50%;
+							top:   50%;
 							left: .7em;
 							font-size: .85em;
 							margin-top: -.4em;

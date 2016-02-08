@@ -361,8 +361,8 @@ label,
 	text-indent: -999em;
 	font-style: normal;
 	font-size: 2em;
-	width:	1em;
-	height:	1em;
+	width:  1em;
+	height: 1em;
 }
 	.i::before{
 		font-family: MAIcons !important;
@@ -370,10 +370,10 @@ label,
 		display: block;
 		position: absolute;
 		padding-top: 50%;
-		top:	0;
-		left:	0;
-		bottom:	0;
-		right:	0;
+		top:    0;
+		left:   0;
+		bottom: 0;
+		right:  0;
 		text-align: center;
 		text-indent: 0;
 	}
