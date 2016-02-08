@@ -533,6 +533,13 @@ main{
 	display: none !important;
 }
 
+.filter-list{
+	padding-left:  1.5em;
+	padding-right: 1.5em;
+}
+
+
+
 main{
 }
 	/** Push info columns into rows */

@@ -266,6 +266,56 @@ label,
 
 
 
+/** Styled choice menu, similar to the search bar */
+.filter-list{
+	border: 0 solid #6d4c4c;
+	border-width: 1px 0;
+	display: block;
+	font-size: 16px;
+	font-size: 1rem;
+	padding: .25em 2.25em;
+	position: relative;
+	max-width: 16em;
+	margin: .5em auto 1em;
+	text-align: center;
+	text-transform: lowercase;
+	white-space: nowrap;
+	color: #c2b8af;
+}
+	/** Stretch dropdown to cover the styled list */
+	.filter-list > select{
+		position: absolute;
+		cursor: pointer;
+		top:     0;
+		left:    0;
+		width:   100%;
+		height:  100%;
+		z-index: 2;
+		opacity: 0;
+	}
+	
+	/** Ornamental caps situated at each end */
+	.filter-list::before,
+	.filter-list::after{
+		content: "\e609";
+		position: absolute;
+		font: 2.8em/0 MAIcons;
+		margin: 0 -.6em;
+		color: #6d4c4c;
+		left: 0;
+		top:  50%;
+		pointer-events: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+		/** Twist the second cap to face the right */
+		.filter-list::after{
+			content: "\e60a";
+			left: auto;
+			right: 0;
+		}
+
+
 /*=============================================================================*
 	4. CLASSES
 ===============================================================================*
