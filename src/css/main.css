@@ -587,19 +587,67 @@ main{
 						display: block;
 					}
 		
+		/** Generic action links for the page */
 		#page-actions{
-			padding-left: 4.3em;
+			padding: 2em 0 0 4em;
+			position: relative;
 		}
+			/** Pointy divider-thing */
+			#page-actions::before{
+				content: "\e603";
+				font: 1em MAIcons;
+				color: #6d3f40;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				text-align: center;
+			}
+			
+			/** List heading */
 			#page-actions > h4{
 				font: 1.375em Georgia;
 				color: #ddd3cb;
 			}
+				/** Spawn a divider before every heading except the first */
+				#page-actions > h4:not(:first-of-type){
+					margin-top: 2em;
+				}
+					#page-actions > h4:not(:first-of-type)::before{
+						color: #6d3f40;
+						content: "\e612";
+						font: .6em MAIcons;
+						position: absolute;
+						left: 0;
+						right: 0;
+						text-align: center;
+						margin-top: -2em;
+					}
+			
+			/** List items */
 			#page-actions > ul{
 				list-style: none;
 				padding: 0;
-				margin: .65em 0;
+				margin: .25em 0 1.25em;
+				position: relative;
 			}
-		
+				/** Ornament */
+				#page-actions > ul::before{
+					content: "\e613";
+					margin: -.2em .13em 0 0;
+					font: 6em MAIcons;
+					position: absolute;
+					right: 100%;
+					top: 0;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
+				
+				#page-actions a{
+					padding: .15em 0;
+					display: inline-block;
+				}
 
 		
 
