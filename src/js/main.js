@@ -49,6 +49,24 @@
 				useBorders: !$(this).hasClass("nb")
 			});
 		});
+		
+		/** "Search on eBay/Amazon" rollouts */
+		$(".affiliates .toggle").on(pressEvent, function(e){
+			var $this  = $(e.target);
+			var li     = $this.closest("li").toggleClass("closed");
+			var ul     = $("ul", li)[0];
+			var offset = ul.scrollHeight;
+			
+			if(li.hasClass("closed")){
+				$this.html("more&hellip;");
+				offset = -offset;
+			}
+			else $this.html("less&hellip;");
+			
+			/** Update the containing accordion's height */
+			var fold  = Accordion.getFold(li[0]);
+			fold.accordion.updateFold(fold, offset);
+		});
 	});
 	
 	

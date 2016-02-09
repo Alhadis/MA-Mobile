@@ -133,7 +133,7 @@
 		}
 			/** Trailing double angle-bracket */
 			.affiliates .toggle::after{
-				content: ">>";
+				content: "<<";
 				color: #a2787a;
 				letter-spacing: -.15em;
 				padding-left: .5em;
@@ -146,15 +146,33 @@
 			}
 		
 		
-		
+		/** "Search on eBay/Amazon" lists */
 		.affiliates .crowned{
+			transition: .3s ease max-height, .3s ease opacity;
 			padding-left: 3.5em;
-			padding-bottom: 1em;
+			max-height: 17.36em;
+			overflow: hidden;
 		}
+			/** Realign the list's vertical ornament */
 			.affiliates .crowned::before{
 				margin-top: .08em;
 				right: auto;
 				left: .15em;
+			}
+			/** Apply bottom padding to child instead of <ul>; simpler transitions */
+			.affiliates .crowned > li:last-child{
+				padding-bottom: 1em;
+			}
+		
+		/** Closed state */
+		.affiliates > .closed{
+		}
+			.affiliates > .closed > .toggle::after{
+				content: ">>";
+			}
+			.affiliates > .closed > .crowned{
+				max-height: 0;
+				opacity: 0;
 			}
 
 
