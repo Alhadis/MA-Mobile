@@ -33,6 +33,7 @@
 .i.next::before         { content: "\2b95"; }
 .i.up::before           { content: "\2b06"; }
 .i.down::before         { content: "\2b07"; }
+.i.edit::before         { content: "\270f"; }
 
 /** Ornamentation */
 .i.border1::before      { content: "\e603"; }

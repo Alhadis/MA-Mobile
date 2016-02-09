@@ -98,6 +98,7 @@ button, .btn, a.btn{
 	color: #a2787a;
 	padding: .25em;
 	font-variant: small-caps;
+	cursor: pointer;
 }
 	/** Icon-buttons */
 	.btn.i{

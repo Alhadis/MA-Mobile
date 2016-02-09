@@ -565,6 +565,38 @@ main{
 							clear: both;
 						}
 		
+		/** Related links */
+		#related-links ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+			#related-links li{
+				border-top: 1px solid #3e0b0a;
+				position: relative;
+			}
+				#related-links li:first-child{
+					border-top: 0;
+				}
+				
+				/** Link */
+				#related-links li > a{
+					display: block;
+					padding: .75em 3em .75em 1em;
+				}
+				
+				/** Edit button */
+				#related-links li > .i.edit{
+					position: absolute;
+					z-index: 5;
+					top:   0;
+					right: 0;
+					margin: .25em;
+				}
+					#related-links li > .i.edit::before{
+						font-size: 1.1em;
+					}
+				
 		
 		/** Footer containing page metadata */
 		#audit-trail{
