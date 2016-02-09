@@ -104,6 +104,57 @@
 					.see-also li::after{            content: ", "; }
 
 
+/** Similar artists */
+#similar-artists > .fold{
+	text-align: center;
+}
+	.recs{
+		list-style: none;
+		text-align: left;
+		margin: 0 -1em 1em;
+		padding: 0;
+		border-bottom: 1px solid #3e0b0a;
+	}
+		.recs > li{
+			position: relative;
+			border-top: 1px solid #3e0b0a;
+			padding: .5em 1em .6em 4.25em;
+		}
+			.genre + .score{
+				position: absolute;
+				text-align: center;
+				top: .55em;
+				left: .3em;
+				width: 3.5em;
+			}
+			.recs > li > .country,
+			.recs > li > .genre{
+				font-size: .9em;
+			}
+
+		/** Vote buttons visible */
+		.can-vote > li{
+			padding-left: 6em;
+		}
+			.can-vote .vote{
+				position: absolute;
+				left: .55em;
+				top: .75em;
+			}
+				.vote > .i.down{
+					margin-left: .15em;
+				}
+			.can-vote .score{
+				top: 3.15em;
+				width: 5em;
+			}
+
+		.recs:not(.can-vote) .vote{
+			display: none;
+		}
+
+
+
 /** Affiliate sites */
 .affiliates{
 	padding: 0;
